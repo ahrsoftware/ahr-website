@@ -6,19 +6,19 @@
 
     <head>
     
-        <title>Arts Research Software</title>
+        <title>ARH Software</title>
 
         <!--Meta-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Arts Research Software portfolio website">
+        <meta name="description" content="ARH Software portfolio website">
         <meta name="keywords" content="arts, research, academia, humanities, art, university, portfolio">
-        <meta name="author" content="Arts Research Software">
+        <meta name="author" content="ARH Software">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Alata&Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet"> 
 
         <!-- CSS -->
         <!-- Bootstrap -->
@@ -50,8 +50,10 @@
 
         <!-- Navigation bar -->
         <nav class="navbar fixed-top navbar-expand-lg">
-            <!-- Logo -->
-            <a class="navbar-brand" href="{% url 'welcome' %}"><h1>Arts Research Software</h1></a>
+            <!-- Logo (don't show on the welcome page) -->
+            {% if request.path != "/" %}
+                <a class="navbar-brand" href="{% url 'welcome' %}"><img src="{% static '/images/logos/arts-research-software-logo-white.png' %}"></a>
+            {% endif %}
             <!-- Nav toggle button (for small screens) -->
             <button class="navbar-toggler" type="button" title="navbartoggle" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
                 <i class="fas fa-bars"></i>
@@ -63,41 +65,17 @@
                     <li class="nav-item">
                         <a class="nav-link{% if request.path == "/" %} active{% endif %}" href="{% url 'welcome' %}">Welcome</a>
                     </li>
-                    <!-- About -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle{% if "/about/" in request.path %} active{% endif %}" href="#" id="navbarDropdownMenuLinkAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                            <a class="dropdown-item" href="{% url 'about-project' %}">Project</a>
-                            <a class="dropdown-item" href="{% url 'about-database' %}">Database</a>
-                            <a class="dropdown-item" href="{% url 'about-team' %}">Team</a>
-                            <a class="dropdown-item" href="{% url 'about-funding' %}">Funding</a>
-                            <a class="dropdown-item" href="{% url 'about-events' %}">Events</a>
-                            <a class="dropdown-item" href="{% url 'about-outputs' %}">Research Outputs</a>
-                        </div>
-                    </li>
-                    <!-- Browse -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle{% if "/browse/" in request.path %} active{% endif %}" href="#" id="navbarDropdownMenuLinkBrowse" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Browse
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkBrowse">
-                            <a class="dropdown-item" href="{% url 'browse-authors-list' %}">Authors</a>
-                            <a class="dropdown-item" href="{% url 'browse-linguisticfields-list' %}">Linguistic Fields</a>
-                            <a class="dropdown-item" href="{% url 'browse-linguisticnotions-list' %}">Linguistic Notions</a>
-                            <a class="dropdown-item" href="{% url 'browse-linguistictraditions-list' %}">Linguistic Traditions</a>
-                            <a class="dropdown-item" href="{% url 'browse-sanskritwords-list' %}">Sanskrit Words</a>
-                            <a class="dropdown-item" href="{% url 'browse-texts-list' %}">Texts</a>
-                        </div>
-                    </li>
-                    <!-- Visualise -->
+                    <!-- Services -->
                     <li class="nav-item">
-                        <a class="nav-link{% if "/visualise/" in request.path %} active{% endif %}" href="{% url 'visualise' %}">Visualise</a>
+                        <a class="nav-link{% if "/services/" in request.path %} active{% endif %}" href="{% url 'services' %}">Services</a>
                     </li>
-                    <!-- Help -->
+                    <!-- Portfolio -->
                     <li class="nav-item">
-                        <a class="nav-link{% if "/help/" in request.path %} active{% endif %}" href="{% url 'help' %}">Help</a>
+                        <a class="nav-link{% if "/portfolio/" in request.path %} active{% endif %}" href="{% url 'portfolio' %}">Portfolio</a>
+                    </li>
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link{% if "/contact/" in request.path %} active{% endif %}" href="{% url 'portfolio' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -117,35 +95,23 @@
             <div id="footer-content" class="container">
 
                 <div id="footer-content-logos">
-                    <a href="https://www.ox.ac.uk/"><img src="{% static 'images/logos/oxford.png' %}" alt="University of Oxford logo"></a>
-                    <a href="https://www.orinst.ox.ac.uk/"><img src="{% static 'images/logos/orinst.png' %}" alt="Oriental Institute logo"></a>
-                    <a href="https://cordis.europa.eu/project/id/851990"><img src="{% static 'images/logos/erc.png' %}" alt="European Research Council logo"></a>
+                    <a href="https://www.ox.ac.uk/"><img src="{% static 'images/logos/arts-research-software-logo-white.png' %}" alt="ARH Software logo"></a>
                 </div>
 
                 <div id="footer-content-text">
                     <p>
-                        This website has been developed as part of the LINGUINDIC research project, which is led by <a href="https://www.orinst.ox.ac.uk/people/john-j-lowe">Dr John Lowe</a> at the <a href="https://www.orinst.ox.ac.uk/">Oriental Institute</a>, <a href="https://www.ox.ac.uk/">University of Oxford</a>.
+                        ARH Software is a specialist software development company,<br>
+                        dedicated to building bespoke software for research projects in the Arts & Humanities
                     </p>
                     <p>
-                        The LINGUINDIC project has received funding from the <a href="https://erc.europa.eu/">European Research Council (ERC)</a>
-                        <br>
-                        under the European Union’s Horizon 2020 research and innovation programme <a href="https://cordis.europa.eu/project/id/851990">(Grant agreement no. 851990)</a>
+                        If you'd like to discuss your project or this website with us,<br>
+                        you can email us at <a href="mailto:mikeallaway@gmail.com?subject=LINGUINDIC website">mikeallaway@gmail.com</a>
                     </p>
                     <p>
-                        If you'd like to discuss the LINGUINDIC project or this website with us, you can email us at <a href="mailto:linguindic@orinst.ox.ac.uk?subject=LINGUINDIC website">linguindic@orinst.ox.ac.uk</a>
+                        <a href="{% url 'cookies' %}">How we use cookies</a>
                     </p>
                     <p>
-                        View our list of <a href="{% url 'browse-references-list' %}">references</a>
-                    </p>
-                    <p>
-                        <a href="https://www.ox.ac.uk/privacy-policy" target="_blank">Privacy</a> |
-                        <a href="https://www.ox.ac.uk/legal" target="_blank">Legal</a> |
-                        <a href="{% url 'cookies' %}">Cookies</a> |
-                        <a href="{% url 'accessibility' %}">Accessibility</a> |
-                        <a href="{% url 'api' %}">API</a>
-                    </p>
-                    <p>
-                        © University of Oxford {% now "Y" %}
+                        © ARH Software {% now "Y" %}
                     </p>
                 </div>
 

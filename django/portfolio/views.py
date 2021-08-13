@@ -6,5 +6,5 @@ class ProjectListView(ListView):
     """
     Class-based view to show the project list template
     """
-    template_name = 'researchdata/project-list.html'
+    template_name = 'portfolio/project-list.html'
     model = models.Project

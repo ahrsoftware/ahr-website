@@ -2,7 +2,11 @@
     /* ---------- Navigation ---------- */
 
     .navbar-brand {
-        padding-left: 0.3em;
+        padding: 0.3em;
+    }
+
+    .navbar-brand img {
+        height: 1.7em;
     }
 
     .nav-link {
@@ -14,19 +18,20 @@
     /* ---------- Main ---------- */
 
     main {
-        margin-top: 3.671em;
-        min-height: calc(100vh - 3.671em);
+        min-height: 100vh;
     }
 
     /* ---------- Welcome ---------- */
 
     #welcome-banner {
-        height: calc(100vh - 3.671em);
+        height: 100vh;
     }
 
     #welcome-banner-tagline {
-        width: 40em;
-        margin-left: 5vw;
+        width: 100%;
+        margin-left: 4em;
+        margin-top: 10vh;
+        text-align: left;
         background: none;
         padding: 0em;
     }
@@ -59,7 +64,7 @@
     /* ---------- Footer ---------- */
 
     #footer-content img {
-        height: 7em;
+        height: 3em;
         margin: 0 4em 2em 4em;
         display: inline-block;
     }

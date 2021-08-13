@@ -1,4 +1,4 @@
-# Arts Research Software - Django Project
+# ARH Software - Django Project
 
 This document outlines key concepts of the Django project and is primarily designed for technical staff working on the development of the project (e.g. software engineers and system admins).
 

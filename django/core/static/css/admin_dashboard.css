@@ -80,7 +80,7 @@ a:link, a:visited {
 }
 
 a:focus, a:hover {
-    color: #705a41;
+    color: #DDD;
 }
 
 table thead th.sorted .sortoptions a.sortremove:focus:after,
@@ -90,7 +90,7 @@ table thead th.sorted .sortoptions a.sortremove:hover:after {
 
 a.active.selector-chooseall:focus, a.active.selector-clearall:focus,
 a.active.selector-chooseall:hover, a.active.selector-clearall:hover {
-    color: #705a41;
+    color: #DDD;
 }
 
 .calendar td a:active, .timelist a:active {

@@ -10,7 +10,7 @@
     }
 
     .navbar-toggler {
-        color: #8d715f;
+        color: white;
         font-size: 1.7em;
         padding-right: 0.35em;
     }
@@ -18,7 +18,7 @@
     /* ---------- Main ---------- */
 
     main {
-        margin-top: 3.39em;
+        /* margin-top: 3.39em; */
         min-height: calc(100vh - 3.39em);
     }
 
@@ -31,7 +31,6 @@
     #welcome-banner-tagline {
         width: 90%;
         margin-left: 5%;
-        background: rgba(255,255,255,0.8);
         padding: 0.5em;
     }
 
