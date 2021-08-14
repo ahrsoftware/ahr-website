@@ -5,13 +5,12 @@
 
     <div id="welcome-banner">
         <div id="welcome-banner-tagline">
-            <img src="{% static '/images/logos/arts-research-software-logo-white.png' %}" style="width: 14em; display: block; margin-bottom: 3em;">
-            AHR Software develop bespoke software<br>
-            for academic research projects<br>
-            within the Arts and Humanities<br>
+            <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-white.png' %}" alt="AHR Software Logo">
+            AHR Software develops bespoke software<br>
+            for arts and humanities research projects<br>
             <br>
-            We build websites, mobile apps,<br>
-            databases and more,<br>
+            We build websites, data visualisations,<br>
+            mobile apps, databases and more,<br>
             to help make your research more<br>
             engaging, accurate, and impactful
         </div>
@@ -26,7 +25,7 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             Why do we use it?
         </p>
-        <img src="{% static '/images/mike-allaway.jpg' %}" style="width: 17em; border-radius: 100%; display: block; margin: 3em auto;">
+        <img id="welcome-mike-circle" src="{% static '/images/mike-allaway.jpg' %}" alt="Photograph of Mike Allaway">
         <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
         </p>
@@ -39,6 +38,15 @@
             $('#welcome-banner-proceed').on('click', function(){
                 $('html,body').animate({ scrollTop: $('#welcome-content').offset().top - 40 }, 800); 
             });
+            // Set the background of the navbar based on scroll position
+            $(document).on('scroll', function (){
+                let navHasSolidBg = $('nav').hasClass('solidbg');
+                let currentPosition = $(window).scrollTop();
+                let pastBanner = $('#welcome-banner').offset().top + $('#welcome-banner').height();
+                // If past banner, add solid background. If not, remove it.
+                if (currentPosition >= pastBanner && !navHasSolidBg) $('nav').addClass('solidbg');
+                else if (currentPosition < pastBanner && navHasSolidBg) $('nav').removeClass('solidbg'); 
+            }).trigger();
         });
     </script>
 

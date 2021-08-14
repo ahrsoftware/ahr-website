@@ -1,5 +1,5 @@
 """
-WSGI config for ARH Software website project.
+WSGI config for AHR Software website project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

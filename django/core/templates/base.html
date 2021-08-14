@@ -6,15 +6,15 @@
 
     <head>
     
-        <title>ARH Software</title>
+        <title>AHR Software</title>
 
         <!--Meta-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="ARH Software portfolio website">
+        <meta name="description" content="AHR Software portfolio website">
         <meta name="keywords" content="arts, research, academia, humanities, art, university, portfolio">
-        <meta name="author" content="ARH Software">
+        <meta name="author" content="AHR Software">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -49,10 +49,10 @@
 			  crossorigin="anonymous"></script>
 
         <!-- Navigation bar -->
-        <nav class="navbar fixed-top navbar-expand-lg">
+        <nav class="navbar fixed-top navbar-expand-lg {% if request.path != "/" %}solidbg{% endif %}">
             <!-- Logo (don't show on the welcome page) -->
             {% if request.path != "/" %}
-                <a class="navbar-brand" href="{% url 'welcome' %}"><img src="{% static '/images/logos/arts-research-software-logo-white.png' %}"></a>
+                <a class="navbar-brand" href="{% url 'welcome' %}"><img src="{% static '/images/logos/ahr-white.png' %}"></a>
             {% endif %}
             <!-- Nav toggle button (for small screens) -->
             <button class="navbar-toggler" type="button" title="navbartoggle" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
@@ -95,12 +95,12 @@
             <div id="footer-content" class="container">
 
                 <div id="footer-content-logos">
-                    <a href="https://www.ox.ac.uk/"><img src="{% static 'images/logos/arts-research-software-logo-white.png' %}" alt="ARH Software logo"></a>
+                    <a href="https://www.ox.ac.uk/"><img src="{% static 'images/logos/ahr-white.png' %}" alt="AHR Software logo"></a>
                 </div>
 
                 <div id="footer-content-text">
                     <p>
-                        ARH Software is a specialist software development company,<br>
+                        AHR Software is a specialist software development company,<br>
                         dedicated to building bespoke software for research projects in the Arts & Humanities
                     </p>
                     <p>
@@ -111,7 +111,7 @@
                         <a href="{% url 'cookies' %}">How we use cookies</a>
                     </p>
                     <p>
-                        © ARH Software {% now "Y" %}
+                        © AHR Software {% now "Y" %}
                     </p>
                 </div>
 

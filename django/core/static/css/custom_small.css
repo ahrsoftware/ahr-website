@@ -33,30 +33,6 @@
         margin-left: 5%;
         padding: 0.5em;
     }
-
-    /* ---------- About ---------- */
-
-    .about-banner {
-        height: 13em;
-    }
-
-    /* ---------- Browse ---------- */
-
-    /* ---------- Browse: List ---------- */
-
-    .list-content-item {
-        margin: 1em 0em;
-        display: block;
-        width: 100%;
-    }
-
-    #list-options-views,
-    #list-options-links {
-        display: block;
-        width: 100%;
-        margin: 1em 0;
-        text-align: left;
-    }
     
     /* ---------- Footer ---------- */
 
