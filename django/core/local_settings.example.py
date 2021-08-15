@@ -25,7 +25,7 @@ else:
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 # Set to ['*'] if in development, or specific IP addresses and domains if in production
-ALLOWED_HOSTS = ['*']/['artsresearch.software']
+ALLOWED_HOSTS = ['*']/['ahr.software']
 
 # Set the database name below
 DATABASES = {
