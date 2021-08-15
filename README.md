@@ -1,8 +1,8 @@
-# Arts Research Software Project Website
+# AHR Software Project Website
 
-This project is a Django-based website developed by Arts Research Software.
+This project is a Django-based website developed by AHR Software.
 
-The purpose of the website is to promote the company and acquire new clients. You can find the officially hosted version of this website at: <https://www.artsresearch.software>
+The purpose of the website is to promote the business and acquire new clients. You can find the officially hosted version of this website at: <https://www.ahr.software>
 
 
 ## Prerequisites
