@@ -38,11 +38,6 @@ To run this project, you're required to have the following software installed on
     - [Django](https://www.djangoproject.com/)
 
 
-## Versioning
-
-This project uses [SemVer](http://semver.org/) for versioning. For the versions available, see the tags on this repository.
-
-
 ## License
 
 See the [LICENSE](LICENSE) file for details
