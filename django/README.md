@@ -48,7 +48,7 @@ This project should comply with PEP8, which is tested using Flake8:
 
 ## Database
 
-The SQLite3 database used sits in the Django project root folder (alongside this README file). It is not included within the Git repo, so must instead be requested from the system admin. Once you have a copy of this database, give it a suitable name like 'artsresearchsoftware.sqlite3' and place in the 'django/' directory (same directory that stores 'manage.py'). Remember to name this database in local_settings.py (see Settings section of this document for more details)
+The SQLite3 database used sits in the Django project root folder (alongside this README file). It is not included within the Git repo, so must instead be requested from the system admin. Once you have a copy of this database, give it a suitable name like 'ahr-software.sqlite3' and place in the 'django/' directory (same directory that stores 'manage.py'). Remember to name this database in local_settings.py (see Settings section of this document for more details)
 
 
 ## Settings

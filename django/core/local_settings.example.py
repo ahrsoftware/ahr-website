@@ -31,9 +31,9 @@ ALLOWED_HOSTS = ['*']/['artsresearch.software']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'artsresearchsoftware.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'ahr-software.sqlite3'),
         'TEST': {
-            'NAME': os.path.join(BASE_DIR, 'artsresearchsoftware_TEST.sqlite3'),
+            'NAME': os.path.join(BASE_DIR, 'ahr-software_TEST.sqlite3'),
         },
     }
 }
