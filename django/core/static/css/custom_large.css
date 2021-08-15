@@ -2,7 +2,7 @@
     /* ---------- Navigation ---------- */
 
     nav {
-        height: 3.4em;
+        height: 4.7em;
     }
 
     .navbar-brand {
@@ -15,7 +15,6 @@
 
     .navbar-nav {
         letter-spacing: 0.1em;
-        height: 3.8em;
     }
 
     .nav-link {
@@ -50,4 +49,5 @@
         margin: 0 4em 2em 4em;
         display: inline-block;
     }
+
 }

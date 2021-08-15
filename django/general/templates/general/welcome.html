@@ -8,6 +8,7 @@
             <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-white.png' %}" alt="AHR Software Logo">
             AHR Software develops bespoke software<br>
             for arts and humanities research projects<br>
+            in the higher education sector<br>
             <br>
             We build websites, data visualisations,<br>
             mobile apps, databases and more,<br>
@@ -25,7 +26,7 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             Why do we use it?
         </p>
-        <img id="welcome-mike-circle" src="{% static '/images/mike-allaway.jpg' %}" alt="Photograph of Mike Allaway">
+        <img id="welcome-mike-circle" src="{% static '/images/welcome/mike-allaway.jpg' %}" alt="Photograph of Mike Allaway">
         <p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
         </p>
@@ -46,7 +47,7 @@
                 // If past banner, add solid background. If not, remove it.
                 if (currentPosition >= pastBanner && !navHasSolidBg) $('nav').addClass('solidbg');
                 else if (currentPosition < pastBanner && navHasSolidBg) $('nav').removeClass('solidbg'); 
-            }).trigger();
+            });
         });
     </script>
 
