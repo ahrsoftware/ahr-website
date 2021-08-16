@@ -57,7 +57,7 @@ h3 {
 /* ---------- Navigation ---------- */
 
 nav {
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0); /* transparent */
     text-transform: uppercase;
     color: white;
     max-width: 100vw;
@@ -65,7 +65,7 @@ nav {
 }
 
 nav.solidbg {
-    background: black;
+    background: #050505;
 }
 
 .navbar-brand {
@@ -127,14 +127,14 @@ main a {
 
 #welcome-banner-tagline {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.9em;
     font-weight: bold;
     line-height: 1.5em;
     color: white;
 }
 
 #welcome-banner-tagline-logo {
-    width: 13em;
+    width: 20em;
     display: block;
     margin-bottom: 2em;
 }
