@@ -25,7 +25,7 @@ unpublish.short_description = "Unpublish selected items (will not appear on main
 
 class ProjectAdminView(admin.ModelAdmin):
     """
-
+    Admin for the Project model
     """
     list_display = ('id', 'name', 'link', 'admin_published', 'meta_created_datetime')
     list_display_links = ('id', 'name')
@@ -50,5 +50,6 @@ class ProjectAdminView(admin.ModelAdmin):
             obj.meta_firstpublished_datetime = datetime.datetime.now()
         # Save
         obj.save()
+
 
 admin.site.register(models.Project, ProjectAdminView)
