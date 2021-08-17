@@ -119,6 +119,8 @@ main a {
     width: 100%;
     padding-top: 10vh;
     background-image: url('../images/welcome/banner-bg.jpg');
+    /* Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -134,7 +136,7 @@ main a {
 }
 
 #welcome-banner-tagline-logo {
-    width: 20em;
+    width: 18em;
     display: block;
     margin-bottom: 2em;
 }
