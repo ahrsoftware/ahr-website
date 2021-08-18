@@ -52,7 +52,7 @@
         <nav class="navbar fixed-top navbar-expand-lg {% if request.path != "/" %}solidbg{% endif %}">
             <!-- Logo (don't show on the welcome page) -->
             {% if request.path != "/" %}
-                <a class="navbar-brand" href="{% url 'welcome' %}"><img src="{% static '/images/logos/ahr-software-white.png' %}"></a>
+                <a class="navbar-brand" href="{% url 'welcome' %}"><img src="{% static '/images/logos/ahr-software-white.png' %}" alt="AHR Software logo"></a>
             {% endif %}
             <!-- Nav toggle button (for small screens) -->
             <button class="navbar-toggler" type="button" title="navbartoggle" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
