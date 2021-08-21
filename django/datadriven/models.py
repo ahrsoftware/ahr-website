@@ -26,7 +26,7 @@ class Message(models.Model):
     def __str__(self):
         created = self.meta_created_datetime.strftime("%d %b %Y %I:%M%p")
         return f"Message from {self.customer_name} ({created})"
-    
+
     @property
     def message_text_short(self):
         return self.message_text[0:75]
@@ -85,7 +85,7 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     @property
     def description_short(self):
         return self.description[0:75]
