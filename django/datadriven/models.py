@@ -14,7 +14,7 @@ class Message(models.Model):
 
     # Many to many relationships
     related_name = "message"
-    author = models.ManyToManyField("Service", related_name=related_name, blank=True, db_table="{}_m2m_message_service".format(apps.app_name))
+    service = models.ManyToManyField("Service", related_name=related_name, blank=True, db_table="{}_m2m_message_service".format(apps.app_name))
 
     # Admin fields
     admin_notes = models.TextField(blank=True, null=True)
