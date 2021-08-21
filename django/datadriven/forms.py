@@ -29,7 +29,7 @@ class ContactForm(forms.ModelForm):
     captcha = ReCaptchaField(widget=ReCaptchaV3, label='')
 
     class Meta:
-        model = models.Story
+        model = models.Message
         fields = ('customer_name',
                   'customer_email',
                   'customer_phone',
