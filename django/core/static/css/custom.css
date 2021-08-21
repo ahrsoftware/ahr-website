@@ -166,10 +166,74 @@ main a {
     width: 16em;
     border-radius: 100%;
     display: block;
-    margin: 3em auto;
+    margin: 2em;
+    float: right;
+}
+
+#welcome-explore {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#welcome-explore li {
+    display: inline-block;
+    padding: 2.5em 4em;
+    margin: 1em;
+    font-size: 1.3em;
+    border: 1px solid #858585;
+    color: #858585;
+}
+
+#welcome-explore li:hover {
+    border: 1px solid #EEE;
+    color: #EEE;
+    background: #131313;
 }
 
 
+/* ---------- Services ---------- */
+
+#services-list {
+    text-align: center;
+}
+
+.services-list-item {
+    display: inline-block;
+    width: 15em;
+    margin: 1em;
+    padding: 1em;
+    vertical-align: top;
+    border-radius: 0.7em;
+    cursor: pointer;
+}
+
+.services-list-item:hover {
+    background: #272727;
+}
+
+.services-list-item label {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+.services-list-item span {
+    font-size: 4.7em;
+    display: block;
+    margin: 0.15em auto;
+    text-align: center;
+}
+
+.services-list-item p {
+    font-size: 0.89em;
+    line-height: 1.4em;
+    text-align: left;
+}
 
 /* ---------- Footer ---------- */
 
