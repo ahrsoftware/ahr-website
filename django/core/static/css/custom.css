@@ -44,15 +44,6 @@ h3 {
     font-size: 1.5em;
 }
 
-.image-circle {
-    border: 0.3rem solid rgba(255,255,255,0.6);
-    border-radius: 100%;
-    width: 13em;
-    max-width: 90%;
-    display: block;
-    margin: 1em auto;
-}
-
 
 /* ---------- Navigation ---------- */
 
@@ -103,7 +94,7 @@ main {
 main p,
 main ul,
 main ol {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2rem;
     letter-spacing: 0.04rem;
     font-weight: 300;
@@ -124,7 +115,7 @@ label {
 }
 
 label.label-active {
-    color: #f39c12;
+    color: #0263ac;
 }
 
 .helptext {
@@ -148,7 +139,7 @@ button[type='submit'] {
 #contact-form input,
 #contact-form textarea,
 #contact-form select {
-    background: #EEE;
+    background: #CCC;
     border: none;
 }
 
@@ -291,7 +282,7 @@ button[type='submit']:hover {
     font-size: 1em;
 }
 
-#services-list a {
+#services-list li {
     display: inline-block;
     width: 16.5em;
     margin: 1em 0.2em;
@@ -299,16 +290,9 @@ button[type='submit']:hover {
     list-style: none;
     vertical-align: top;
     border-radius: 0.7em;
-    cursor: pointer;
 }
 
-#services-list a:hover {
-    background: #272727;
-    color: #FFF;
-    text-decoration: none;
-}
-
-#services-list a li label {
+#services-list li label {
     font-size: 1.2em;
     font-weight: bold;
     display: block;
@@ -316,43 +300,90 @@ button[type='submit']:hover {
     text-align: center;
 }
 
-#services-list a li span i {
+#services-list li span i {
     font-size: 4.7em;
     display: block;
     margin: 0.3em auto;
     text-align: center;
 }
 
-#services-list a li p {
+#services-list li p {
     font-size: 0.85em;
     line-height: 1.4em;
     text-align: left;
 }
 
 #services-process-list {
-
     max-width: 90%;
     margin: 2em auto 1em auto;
     padding-left: 0;
     list-style: none;
-    counter-reset: serviceprocesslistcounter;
+}
+
+#services-process-list li label {
+    border: 3px solid white;
+    border-radius: 100%;
+    display: inline-block;
+    width: 2em;
+    font-weight: bold;
+    padding: 0.51em;
+    font-size: 2em;
+    margin: 0.4em 0.8em 0.4em 0;
+    vertical-align: middle;
     text-align: center;
 }
 
-#services-process-list li::before {
-    content: counter(serviceprocesslistcounter) "";
-    border: 3px solid white;
-    border-radius: 100%;
-    display: block;
-    width: 2em;
-    font-weight: bold;
+#services-process-list li span {
+    width: calc(100% - 7em);
+    display: inline-block;
+    vertical-align: middle;
     padding: 0.5em;
-    font-size: 2em;
-    margin: 1.5em auto 0.5em auto;
 }
 
-#services-process-list li {
-    counter-increment: serviceprocesslistcounter;
+
+/* ---------- Footer ---------- */
+
+#portfolio-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#portfolio-list li {
+    display: block;
+    margin: 3em auto 5em auto;
+}
+
+#portfolio-list li div {
+    display: inline-block;
+    width: 20em;
+    vertical-align: top;
+}
+
+#portfolio-list li label {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+#portfolio-list li img {
+    vertical-align: top;
+    width: calc(100% - 21em);
+    display: inline-block;
+    border: 1px solid #505050;
+}
+
+
+/* ---------- Contact ---------- */
+
+#contact-form {
+    width: 70%;
+    margin: auto;
+}
+
+#contact-form label,
+#contact-form .helptext {
+    font-size: 0.9rem;
 }
 
 

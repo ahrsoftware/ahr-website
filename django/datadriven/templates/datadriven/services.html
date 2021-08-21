@@ -8,58 +8,43 @@
 
         <ul id="services-list">
             {% for service in service_list %}
-                <a href="{% url 'contact' %}">
-                    <li>
-                        <label>{{ service.name }}</label>
-                        <span><i class="{{ service.fontawesome_icon }}"></i></span>
-                        <p>{{ service.description }}</p>
-                    </li>
-                </a>
+                <li>
+                    <label>{{ service.name }}</label>
+                    <span><i class="{{ service.fontawesome_icon }}"></i></span>
+                    <p>{{ service.description }}</p>
+                </li>
             {% empty %}
                 <p>Please contact us for more information about our services.</p>
             {% endfor %}
         </ul>
-
-        <h2>How Our Services Are Unique</h2>
-        <p>
-            ...
-        </p>
 
         <h2>The Process</h2>
         <p>
             We understand how dynamic and unpredictable research projects can be. We anticipate and accommodate this unpredictability with a process that's transparent, flexible, and straightforward.
         </p>
         <p>
-            Although each project is unique, the below diagram shows the lifecycle of a typical project:
+            Although each project is unique, a typical project lifecycle follows these 5 steps:
         </p>
         <ol id="services-process-list">
             <li>
                 <label>1</label>
-                <span>Advice (free, no obligation, grant app)</span>
+                <span>Initial free advice session and help with grant application</span>
             </li>
             <li>
                 <label>2</label>
-                <span>In-depth discussion to establish and agree on core requirements</span>
+                <span>Establish and agree on requirements</span>
             </li>
             <li>
                 <label>3</label>
-                <span>Early designs, discussed for feedback</span>
+                <span>Iterative design and development, with regular reviews to accommodate unforeseen changes</span>
             </li>
             <li>
                 <label>4</label>
-                <span>Iterative development, with regular reviews to accommodate unforeseen changes</span>
+                <span>Finish: final quality checks, tests, make live/public</span>
             </li>
             <li>
                 <label>5</label>
-                <span>Quality checks: tests, checks, feedback, tweaks</span>
-            </li>
-            <li>
-                <label>6</label>
-                <span>Make live</span>
-            </li>
-            <li>
-                <label>7</label>
-                <span>Maintenance and open communication</span>
+                <span>Ongoing maintenance and open communication</span>
             </li>
         </ol>
     </div>

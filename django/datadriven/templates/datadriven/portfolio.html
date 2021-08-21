@@ -6,6 +6,19 @@
     <div class="container">
         <h2>Portfolio</h2>
 
+        <ul id="portfolio-list">    
+            {% for project in project_list %}
+                <li>
+                    <div>
+                        <a href="{{ project.link }}" target="_blank"><label>{{ project.name }}</label></a>
+                        <p>
+                            {{ project.description }}
+                        </p>
+                    </div>
+                    <a href="{{ project.link }}" target="_blank"><img src="{{ project.image.url }}" alt="Image of {{ project.name }}"></a>
+                </li>
+            {% endfor %}
+        </ul>
         
     </div>
     

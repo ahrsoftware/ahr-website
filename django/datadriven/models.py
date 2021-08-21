@@ -42,7 +42,7 @@ class Project(models.Model):
 
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
-    main_image = models.ImageField(upload_to='projects', blank=True, null=True)
+    image = models.ImageField(upload_to='portfolio', blank=True, null=True)
     link = models.URLField(blank=True, null=True)
     order = models.IntegerField(default=100)
 

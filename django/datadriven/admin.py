@@ -1,6 +1,9 @@
 from django.contrib import admin
 from . import models
 
+# Set the title of the dashboard
+admin.site.site_header = 'AHR Software: Admin Dashboard'
+
 
 def publish(modeladmin, request, queryset):
     """

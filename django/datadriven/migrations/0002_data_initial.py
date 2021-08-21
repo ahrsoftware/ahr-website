@@ -2,6 +2,77 @@ from django.db import migrations
 from datadriven import models
 
 
+def insert_projects(apps, schema_editor):
+    """
+    Inserts Project objects
+    """
+
+    projects = [
+        {
+            'name': 'LINGUINDIC',
+            'description': "x \
+                            x \
+                            x.",
+            'image': 'portfolio/linguindic.jpg',
+            'link': 'https://linguindic.com/',
+            'order': 1
+        },
+        {
+            'name': 'Everyday Lookism',
+            'description': "x \
+                            x \
+                            x.",
+            'image': 'portfolio/everydaylookism.jpg',
+            'link': 'https://everydaylookism.bham.ac.uk/',
+            'order': 2
+        },
+        {
+            'name': 'Linguistic Atlas of Judeo-Spanishes',
+            'description': "x \
+                            x \
+                            x.",
+            'image': 'portfolio/judeospanish.jpg',
+            'link': 'https://judeospanish.bham.ac.uk/',
+            'order': 3
+        },
+        {
+            'name': 'Testimony in Practice',
+            'description': "x \
+                            x \
+                            x.",
+            'image': 'portfolio/testimonyinpractice.jpg',
+            'link': 'https://testimonyinpractice.bham.ac.uk/',
+            'order': 4
+        },
+        {
+            'name': 'Visualise Baudelaire Song',
+            'description': "x \
+                            x \
+                            x.",
+            'image': 'portfolio/visualisebaudelairesong.jpg',
+            'link': 'https://visualisebaudelairesong.bham.ac.uk/',
+            'order': 5
+        },
+        {
+            'name': 'Out of Our Minds',
+            'description': "x \
+                            x \
+                            x.",
+            'image': 'portfolio/outofourminds.jpg',
+            'link': 'https://outofourminds.bham.ac.uk/',
+            'order': 6
+        }
+    ]
+
+    # Loop through above data structure, adding each item as a model
+    for p in projects:
+        models.Project(name=p['name'],
+                       description=p['description'],
+                       image=p['image'],
+                       link=p['link'],
+                       order=p['order']).save()
+
+
 def insert_services(apps, schema_editor):
     """
     Inserts Service objects
@@ -39,7 +110,8 @@ def insert_services(apps, schema_editor):
             'description': "We use software to improve the quantity and \
                             quality of the research data you collect. \
                             We can scrape large amounts of data from the web \
-                            and gather high-quality responses from custom web surveys.",
+                            and gather high-quality responses from custom \
+                            web and mobile surveys.",
             'order': 4
         },
         {
@@ -96,5 +168,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(insert_projects),
         migrations.RunPython(insert_services),
     ]
