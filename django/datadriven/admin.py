@@ -23,33 +23,42 @@ def unpublish(modeladmin, request, queryset):
 unpublish.short_description = "Unpublish selected items (will not appear on main site)"
 
 
+class MessageAdminView(admin.ModelAdmin):
+    """
+    Admin for the Message model
+    """
+    list_display = ('id', 'meta_created_datetime', 'customer_name', 'customer_email', 'customer_phone', 'message_text_short')
+    list_display_links = ('id', 'meta_created_datetime')
+    search_fields = ('name', 'description', 'link', 'admin_notes')
+    readonly_fields = ('meta_created_datetime', 'meta_lastupdated_datetime')
+
+
 class ProjectAdminView(admin.ModelAdmin):
     """
     Admin for the Project model
     """
-    list_display = ('id', 'name', 'link', 'admin_published', 'meta_created_datetime')
+    list_display = ('id', 'name', 'order', 'description_short', 'link', 'admin_published', 'meta_created_datetime')
     list_display_links = ('id', 'name')
-    list_filter = ('admin_published', 'meta_created_by')
+    list_filter = ('admin_published',)
     search_fields = ('name', 'description', 'link', 'admin_notes')
-    ordering = ('id',)
+    ordering = ('order', 'name', 'id')
     actions = (publish, unpublish)
-    readonly_fields = ('meta_created_by', 'meta_created_datetime', 'meta_lastupdated_by', 'meta_lastupdated_datetime', 'meta_firstpublished_datetime')
-
-    def save_model(self, request, obj, form, change):
-        """
-        Override default save_model, by adding values to automated fields
-        """
-
-        # Meta: created by
-        if getattr(obj, 'meta_created_by', None) is None:
-            obj.meta_created_by = request.user
-        # Meta: last updated by
-            obj.meta_lastupdated_by = request.user
-        # Meta: first published datetime (only set if the first time being published)
-        if getattr(obj, 'admin_published', None) is True and getattr(obj, 'meta_firstpublished_datetime', None) is None:
-            obj.meta_firstpublished_datetime = datetime.datetime.now()
-        # Save
-        obj.save()
+    readonly_fields = ('meta_created_datetime', 'meta_lastupdated_datetime')
 
 
+class ServiceAdminView(admin.ModelAdmin):
+    """
+    Admin for the Service model
+    """
+    list_display = ('id', 'name', 'order', 'description_short', 'fontawesome_icon', 'admin_published', 'meta_created_datetime')
+    list_display_links = ('id', 'name')
+    list_filter = ('admin_published',)
+    search_fields = ('name', 'description', 'fontawesome_icon', 'admin_notes')
+    ordering = ('order', 'name', 'id')
+    actions = (publish, unpublish)
+    readonly_fields = ('meta_created_datetime', 'meta_lastupdated_datetime')
+
+
+admin.site.register(models.Message, MessageAdminView)
 admin.site.register(models.Project, ProjectAdminView)
+admin.site.register(models.Service, ServiceAdminView)

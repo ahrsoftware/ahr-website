@@ -1,4 +1,37 @@
 from django.db import models
+from . import apps
+
+
+class Message(models.Model):
+    """
+    A message sent to the business by a prospective client through the website
+    """
+
+    customer_name = models.CharField(max_length=255)
+    customer_email = models.EmailField()
+    customer_phone = models.CharField(max_length=50, blank=True, null=True)
+    message_text = models.TextField(blank=True, null=True)
+
+    # Many to many relationships
+    related_name = "message"
+    author = models.ManyToManyField("Service", related_name=related_name, blank=True, db_table="{}_m2m_message_service".format(apps.app_name))
+
+    # Admin fields
+    admin_notes = models.TextField(blank=True, null=True)
+
+    # Metadata fields
+    meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name="Created")
+    meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
+
+    def __str__(self):
+        return self.name
+    
+    @property
+    def message_text_short(self):
+        return self.message_text[0:75]
+
+    class Meta:
+        ordering = ['-meta_created_datetime', '-id']
 
 
 class Project(models.Model):
@@ -10,6 +43,7 @@ class Project(models.Model):
     description = models.TextField(blank=True, null=True)
     main_image = models.ImageField(upload_to='projects', blank=True, null=True)
     link = models.URLField(blank=True, null=True)
+    order = models.IntegerField(default=100)
 
     # Admin fields
     admin_published = models.BooleanField(default=False)
@@ -22,8 +56,12 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def description_short(self):
+        return self.description[0:75]
+
     class Meta:
-        ordering = ['name', '-id']
+        ordering = ['order', 'name', '-id']
 
 
 class Service(models.Model):
@@ -33,7 +71,8 @@ class Service(models.Model):
 
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
-    icon = models.CharField(blank=True, null=True)
+    fontawesome_icon = models.CharField(max_length=100, blank=True, null=True)
+    order = models.IntegerField(default=100)
 
     # Admin fields
     admin_published = models.BooleanField(default=False)
@@ -45,6 +84,10 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
+    
+    @property
+    def description_short(self):
+        return self.description[0:75]
 
     class Meta:
-        ordering = ['name', '-id']
+        ordering = ['order', 'name', '-id']
