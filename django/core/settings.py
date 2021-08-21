@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     # Custom
     'general',
-    'portfolio'
+    'datadriven'
 ]
 
 MIDDLEWARE = [

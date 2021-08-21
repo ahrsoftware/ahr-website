@@ -13,7 +13,7 @@ The project is called 'website', but project files are stored in the 'core' fold
 Apps include:
 
 - **general** - this is for general sections of the website that don't require a data model (e.g. welcome page, services page, cookies page, etc.)
-- **portfolio** - this app showcases existing work via a portfolio and includes related feedback, etc.
+- **datadriven** - this app includes parts of the website that are driven by data from the model. As there are a few small sections (services, portfolio, contacts) it made sense to group together in one app.
 
 
 ## Django Admin

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
-app_name = "portfolio"
+app_name = "datadriven"
 
 
 class ManagedConfig(AppConfig):

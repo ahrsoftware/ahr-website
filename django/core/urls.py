@@ -5,13 +5,11 @@ from django.conf import settings
 
 urlpatterns = [
 
-    # General app's urls
+    # Custom apps
     path('', include('general.urls')),
+    path('', include('datadriven.urls')),
 
-    # Research Data app's urls
-    path('data/', include('portfolio.urls')),
-
-    # Include Django admin urls
+    # Django admin
     path('dashboard/', admin.site.urls),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
