@@ -24,7 +24,8 @@ class Message(models.Model):
     meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
 
     def __str__(self):
-        return self.name
+        created = self.meta_created_datetime.strftime("%d %b %Y %I:%M%p")
+        return f"Message from {self.customer_name} ({created})"
     
     @property
     def message_text_short(self):
@@ -46,7 +47,7 @@ class Project(models.Model):
     order = models.IntegerField(default=100)
 
     # Admin fields
-    admin_published = models.BooleanField(default=False)
+    admin_published = models.BooleanField(default=True)
     admin_notes = models.TextField(blank=True, null=True)
 
     # Metadata fields
@@ -75,7 +76,7 @@ class Service(models.Model):
     order = models.IntegerField(default=100)
 
     # Admin fields
-    admin_published = models.BooleanField(default=False)
+    admin_published = models.BooleanField(default=True)
     admin_notes = models.TextField(blank=True, null=True)
 
     # Metadata fields

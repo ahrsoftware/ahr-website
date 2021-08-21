@@ -3,7 +3,7 @@ from . import models, forms
 from django.urls import reverse_lazy
 
 
-class ContactCreateView(CreateView):
+class ContactView(CreateView):
     """
     Class-based view to show the  template
     """
@@ -12,7 +12,7 @@ class ContactCreateView(CreateView):
     success_url = reverse_lazy('contact')
 
 
-class ContactCreateSuccessTemplateView(TemplateView):
+class ContactSuccessView(TemplateView):
     """
     Class-based view to show the message create success template
     """
@@ -24,7 +24,7 @@ class PortfolioView(ListView):
     Class-based view to show the project list template
     """
     template_name = 'datadriven/portfolio.html'
-    model = models.Project
+    queryset = models.Project.objects.filter(admin_published=True)
 
 
 class ServicesView(ListView):
@@ -32,4 +32,4 @@ class ServicesView(ListView):
     Class-based view to show the services template
     """
     template_name = 'datadriven/services.html'
-    model = models.Service
+    queryset = models.Service.objects.filter(admin_published=True)
