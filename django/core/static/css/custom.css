@@ -114,7 +114,9 @@ main p a {
 
 .nextup a {
     display: inline-block;
-    padding: 1.7em 2.7em;
+    padding: 1.7em 0 1.7em 0;
+    width: 11em;
+    max-width: 100%;
     margin: 1em auto 0 auto;
     font-size: 1.7em;
     color: black;
