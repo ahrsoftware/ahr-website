@@ -13,7 +13,7 @@ body {
 
 a {
     color: white;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 a:hover {
@@ -30,10 +30,10 @@ h1 {
 h2 {
     padding-top: 2.5em;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
-    font-size: 1.7em;
-    margin: 1.5em 0 1em 0;
+    font-size: 2.3em;
+    margin: 2em 0 1.3em 0;
 }
 
 h3 {
@@ -41,7 +41,7 @@ h3 {
     font-weight: bold;
     color: white;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 
@@ -49,7 +49,6 @@ h3 {
 
 nav {
     background: rgba(0,0,0,0); /* transparent */
-    text-transform: uppercase;
     color: white;
     max-width: 100vw;
     overflow: hidden;
@@ -60,16 +59,12 @@ nav.solidbg {
 }
 
 .navbar-brand {
-    font-family: 'Alata', sans-serif;
     display: inline-block;
-    font-size: 1.6em;
-    letter-spacing: 0.2em;
-    font-weight: 300;
-    color: white;
+    font-size: 2em;
 }
 
 .navbar-nav {
-    letter-spacing: 0.1em;
+    font-size: 1.1em;
 }
 
 .nav-link {
@@ -88,20 +83,24 @@ nav a:hover {
 /* ---------- Main ---------- */
 
 main {
-    padding-bottom: 8em;
+    padding-bottom: 7em;
 }
 
 main p,
 main ul,
 main ol {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     letter-spacing: 0.04rem;
     font-weight: 300;
 }
 
-main a {
+a {
     text-decoration: none;
+}
+
+p a {
+    text-decoration: underline;
 }
 
 .nextup {
@@ -111,7 +110,7 @@ main a {
 .nextup a {
     display: inline-block;
     padding: 2.5em 4em;
-    margin: 2em auto;
+    margin: 2em auto 0 auto;
     font-size: 1.3em;
     color: black;
     background: #DDD;
@@ -284,7 +283,7 @@ button[type='submit']:hover {
 #services-list li {
     display: inline-block;
     width: 16.5em;
-    margin: 1em 0.2em;
+    margin: 0em 0.2em 1em 0.2em;
     padding: 1em;
     list-style: none;
     vertical-align: top;
@@ -350,7 +349,8 @@ button[type='submit']:hover {
 
 #portfolio-list li {
     display: block;
-    margin: 3em auto 5em auto;
+    margin: 8em auto;
+    display: block;
 }
 
 #portfolio-list li div {
@@ -360,7 +360,7 @@ button[type='submit']:hover {
 }
 
 #portfolio-list li label {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 1em;
@@ -379,7 +379,7 @@ button[type='submit']:hover {
 
 #contact-form {
     width: 70%;
-    margin: auto;
+    margin: 5em auto 1em auto;
 }
 
 #contact-form label,
