@@ -8,6 +8,13 @@ class WelcomeTemplateView(TemplateView):
     template_name = 'general/welcome.html'
 
 
+class AccessibilityTemplateView(TemplateView):
+    """
+    Class-based view to show the accessibility template
+    """
+    template_name = 'general/accessibility.html'
+
+
 class CookiesTemplateView(TemplateView):
     """
     Class-based view to show the cookies template

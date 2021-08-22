@@ -6,7 +6,7 @@ body {
     color: white;
     margin: 0;
     font-weight: 300;
-    background: #050505;
+    background: #131313;
     max-width: 100vw;
     overflow-x: hidden;
 }
@@ -32,7 +32,7 @@ h2 {
     color: white;
     font-weight: 600;
     text-align: center;
-    font-size: 2.3em;
+    font-size: 2.5em;
     margin: 2em 0 1.3em 0;
 }
 
@@ -55,7 +55,7 @@ nav {
 }
 
 nav.solidbg {
-    background: #050505;
+    background: #131313;
 }
 
 .navbar-brand {
@@ -69,7 +69,7 @@ nav.solidbg {
 
 .nav-link {
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .nav-link.active {
@@ -95,11 +95,15 @@ main ol {
     font-weight: 300;
 }
 
-a {
+main a {
     text-decoration: none;
 }
 
-p a {
+main a:hover {
+    text-decoration: none;
+}
+
+main p a {
     text-decoration: underline;
 }
 
@@ -109,9 +113,9 @@ p a {
 
 .nextup a {
     display: inline-block;
-    padding: 2.5em 4em;
+    padding: 2em 3em;
     margin: 2em auto 0 auto;
-    font-size: 1.3em;
+    font-size: 1.7em;
     color: black;
     background: #DDD;
     border-radius: 0.3em;
@@ -291,7 +295,7 @@ button[type='submit']:hover {
 }
 
 #services-list li label {
-    font-size: 1.2em;
+    font-size: 1.7em;
     font-weight: bold;
     display: block;
     margin: 0.5em auto;
@@ -301,7 +305,7 @@ button[type='submit']:hover {
 #services-list li span i {
     font-size: 4.7em;
     display: block;
-    margin: 0.3em auto;
+    margin: 0.5em auto;
     text-align: center;
 }
 
@@ -324,9 +328,9 @@ button[type='submit']:hover {
     border-radius: 100%;
     display: inline-block;
     width: 2.2em;
-    font-weight: bold;
-    padding: 0.51em;
-    font-size: 2em;
+    font-weight: 600;
+    padding: 0.64em;
+    font-size: 2.5em;
     margin: 0.4em 0.8em 0.4em 0;
     vertical-align: middle;
     text-align: center;
@@ -334,9 +338,11 @@ button[type='submit']:hover {
 
 #services-process-list li span {
     width: calc(100% - 7em);
+    font-size: 1.4em;
     display: inline-block;
     vertical-align: middle;
     padding: 0.5em;
+    font-weight: bold;
 }
 
 
@@ -345,6 +351,7 @@ button[type='submit']:hover {
 #portfolio-list {
     list-style: none;
     padding-left: 0;
+    margin-top: -2em;
 }
 
 #portfolio-list li {
@@ -357,18 +364,20 @@ button[type='submit']:hover {
     display: inline-block;
     width: 20em;
     vertical-align: top;
+    margin-right: 1em;
 }
 
 #portfolio-list li label {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 1em;
+    margin-top: 0.7em;
 }
 
 #portfolio-list li img {
     vertical-align: top;
-    width: calc(100% - 21em);
+    width: calc(100% - 22em);
     display: inline-block;
     border: 1px solid #505050;
     border-radius: 0.5em;
@@ -384,7 +393,7 @@ button[type='submit']:hover {
 
 #contact-form label,
 #contact-form .helptext {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 #contact-success-icon {
@@ -416,10 +425,11 @@ button[type='submit']:hover {
 footer {
     padding: 5em 0;
     text-align: center;
+    background: #171717;
 }
 
 #footer-content-text {
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 footer a:hover {

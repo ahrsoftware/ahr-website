@@ -105,6 +105,15 @@ def insert_services(apps, schema_editor):
             'order': 3
         },
         {
+            'name': 'Visualisations',
+            'fontawesome_icon': 'fas fa-chart-pie',
+            'description': "Data visualisations are an extremely engaging \
+                            way to read, understand, and share your data. \
+                            We can design interactive visualisations and \
+                            embed them in a website or mobile app.",
+            'order': 4
+        },
+        {
             'name': 'Data Collection',
             'fontawesome_icon': 'fas fa-keyboard',
             'description': "We use software to improve the quantity and \
@@ -112,7 +121,7 @@ def insert_services(apps, schema_editor):
                             We can scrape large amounts of data from the web \
                             and gather high-quality responses from custom \
                             web and mobile surveys.",
-            'order': 4
+            'order': 5
         },
         {
             'name': 'Data Storage',
@@ -122,15 +131,6 @@ def insert_services(apps, schema_editor):
                             or in a format like XML, JSON, or CSV. \
                             We'll help you design an efficient data \
                             structure and help you store your data securely.",
-            'order': 5
-        },
-        {
-            'name': 'Data Visualisations',
-            'fontawesome_icon': 'fas fa-chart-pie',
-            'description': "Data visualisations are an extremely engaging \
-                            way to read, understand, and share your data. \
-                            We can design interactive visualisations and \
-                            embed them in a website or mobile app.",
             'order': 6
         },
         {
@@ -142,7 +142,7 @@ def insert_services(apps, schema_editor):
             'order': 7
         },
         {
-            'name': 'Project Branding',
+            'name': 'Branding',
             'fontawesome_icon': 'fas fa-palette',
             'description': "We can design unique and attractive branding \
                             for your research project and apply this to your \
