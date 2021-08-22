@@ -31,7 +31,7 @@ class MessageAdminView(admin.ModelAdmin):
     """
     list_display = ('id', 'meta_created_datetime', 'customer_name', 'customer_email', 'message_text_short')
     list_display_links = ('id', 'meta_created_datetime')
-    search_fields = ('customer_name', 'customer_email','message_text' 'admin_notes')
+    search_fields = ('customer_name', 'customer_email', 'message_text' 'admin_notes')
     readonly_fields = ('meta_created_datetime', 'meta_lastupdated_datetime')
 
 

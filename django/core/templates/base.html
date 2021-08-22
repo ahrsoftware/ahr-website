@@ -93,27 +93,14 @@
         <footer class="container-fluid">
             <!-- Content -->
             <div id="footer-content" class="container">
-
-                <div id="footer-content-logos">
-                    <img src="{% static 'images/logos/ahr-software.png' %}" alt="AHR Software logo">
-                </div>
-
-                <div id="footer-content-text">
-                    <p>
-                        AHR Software develops bespoke software for arts and humanities research projects in the higher education sector
-                    </p>
-                    <p>
-                        If you'd like to discuss your project or this website with us,
-                        you can email us at <a href="mailto:mikeallaway@gmail.com?subject=AHR Software website">mikeallaway@gmail.com</a>
-                    </p>
-                    <p>
-                        <a href="{% url 'cookies' %}">Cookies</a> | <a href="{% url 'accessibility' %}">Accessibility</a>
-                    </p>
-                    <p>
-                        © AHR Software {% now "Y" %}
-                    </p>
-                </div>
-
+                <p>
+                    <a href="{% url 'contact' %}">Contact</a> |
+                    <a href="{% url 'accessibility' %}">Accessibility</a> |
+                    <a href="{% url 'cookies' %}">Cookies</a>
+                </p>
+                <p>
+                    <strong>©</strong> AHR Software {% now "Y" %}
+                </p>
             </div>
         </footer>
 

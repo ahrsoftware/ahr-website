@@ -1,5 +1,4 @@
 from django.db import models
-from . import apps
 
 
 class Message(models.Model):

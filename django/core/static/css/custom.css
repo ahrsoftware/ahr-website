@@ -33,7 +33,7 @@ h2 {
     font-weight: 600;
     text-align: center;
     font-size: 2.5em;
-    margin: 2em 0 1.3em 0;
+    margin: 1em 0 1.3em 0;
 }
 
 h3 {
@@ -68,12 +68,13 @@ nav.solidbg {
 }
 
 .nav-link {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 1.1em;
 }
 
 .nav-link.active {
     font-weight: 600;
+    color: #DE304D;
 }
 
 nav a:hover {
@@ -83,7 +84,7 @@ nav a:hover {
 /* ---------- Main ---------- */
 
 main {
-    padding-bottom: 7em;
+    padding-bottom: 10em;
 }
 
 main p,
@@ -113,8 +114,8 @@ main p a {
 
 .nextup a {
     display: inline-block;
-    padding: 2em 3em;
-    margin: 2em auto 0 auto;
+    padding: 1.7em 2.7em;
+    margin: 1em auto 0 auto;
     font-size: 1.7em;
     color: black;
     background: #DDD;
@@ -221,7 +222,7 @@ button[type='submit']:hover {
 #welcome-banner {
     width: 100%;
     padding-top: 10vh;
-    background-image: url('../images/welcome/banner-bg.jpg');
+    /* background-image: url('../images/welcome/banner-bg.jpg'); */
     /* Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    */
     background-repeat: no-repeat;
@@ -282,6 +283,7 @@ button[type='submit']:hover {
     text-align: center;
     padding-left: 0;
     font-size: 1em;
+    cursor: default;
 }
 
 #services-list li {
@@ -321,6 +323,7 @@ button[type='submit']:hover {
     margin: 3em auto 1em auto;
     padding-left: 0;
     list-style: none;
+    cursor: default;
 }
 
 #services-process-list li label {
@@ -329,11 +332,16 @@ button[type='submit']:hover {
     display: inline-block;
     width: 2.2em;
     font-weight: 600;
-    padding: 0.64em;
-    font-size: 2.5em;
+    padding: 0.64em 0 0 0.05em;
+    height: 2.2em;
+    font-size: 2.3em;
     margin: 0.4em 0.8em 0.4em 0;
     vertical-align: middle;
     text-align: center;
+}
+
+#services-process-list li label i {
+    margin-top: -1em;
 }
 
 #services-process-list li span {
@@ -351,7 +359,7 @@ button[type='submit']:hover {
 #portfolio-list {
     list-style: none;
     padding-left: 0;
-    margin-top: -2em;
+    margin-top: -3em;
 }
 
 #portfolio-list li {
@@ -425,17 +433,9 @@ button[type='submit']:hover {
 footer {
     padding: 5em 0;
     text-align: center;
-    background: #171717;
+    background: #DE304D;
 }
 
-#footer-content-text {
-    margin-top: 1em;
-}
-
-footer a:hover {
-    color: white;
-    opacity: 1;
-}
 
 /* ---------- Error Pages ---------- */
 
