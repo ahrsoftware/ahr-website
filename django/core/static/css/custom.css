@@ -165,8 +165,9 @@ button[type='submit'] {
 #contact-form input,
 #contact-form textarea,
 #contact-form select {
-    background: #CCC;
+    background: #FFF;
     border: none;
+    border-radius: 0.3em;
 }
 
 #contact-form input[type='file'] {
@@ -253,12 +254,11 @@ button[type='submit']:hover {
 	bottom: 0.8em;
     left: calc(50% - 40px);
     border-radius: 100%;
-    border: 2px solid white;
+    border: 4px solid white;
     width: 80px;
     height: 80px;
 	text-align: center;
 	color: white;
-	padding-top: 2px;
     cursor: pointer;
     line-height: 80px;
 }
@@ -271,12 +271,11 @@ button[type='submit']:hover {
 #welcome-mike-circle {
     width: 16em;
     border-radius: 100%;
+    border: 4px solid white;
     display: block;
     margin: 2em;
     float: right;
 }
-
-
 
 
 /* ---------- Services ---------- */
@@ -322,7 +321,7 @@ button[type='submit']:hover {
 #services-process-list {
     max-width: 90%;
     width: 40em;
-    margin: 3em auto 1em auto;
+    margin: 5em auto 1em auto;
     padding-left: 0;
     list-style: none;
     cursor: default;
@@ -433,9 +432,17 @@ button[type='submit']:hover {
 /* ---------- Footer ---------- */
 
 footer {
-    padding: 5em 0;
+    padding: 4em 0 3em 0;
     text-align: center;
     background: #DE304D;
+}
+
+#footer-content {
+    font-size: 1.2em;
+}
+
+footer a:hover {
+    color: white;
 }
 
 
