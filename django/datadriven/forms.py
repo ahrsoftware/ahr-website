@@ -12,18 +12,10 @@ class ContactForm(forms.ModelForm):
     customer_name = forms.CharField(label=_('Name'),
                                     required=True)
     customer_email = forms.EmailField(label=_('Email'),
-                                      help_text='Optional',
-                                      required=False)
-    customer_phone = forms.CharField(label=_('Phone'),
-                                     help_text='Optional',
-                                     required=False)
-    message_text = forms.CharField(widget=forms.Textarea(attrs={'rows': 4}),
-                                   label=_('Message'))
-    service = forms.ModelMultipleChoiceField(label=_("Services I'd like to discuss"),
-                                             queryset=models.Service.objects,
-                                             widget=forms.CheckboxSelectMultiple,
-                                             help_text=_('Optional. Select all that apply'),
-                                             required=False)
+                                      required=True)
+    message_text = forms.CharField(widget=forms.Textarea(attrs={'rows': 6}),
+                                   label=_('Message'),
+                                   required=True)
 
     # Google ReCaptcha
     captcha = ReCaptchaField(widget=ReCaptchaV3, label='')
@@ -32,6 +24,4 @@ class ContactForm(forms.ModelForm):
         model = models.Message
         fields = ('customer_name',
                   'customer_email',
-                  'customer_phone',
-                  'message_text',
-                  'service')
+                  'message_text')

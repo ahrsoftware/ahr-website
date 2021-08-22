@@ -9,12 +9,7 @@ class Message(models.Model):
 
     customer_name = models.CharField(max_length=255)
     customer_email = models.EmailField()
-    customer_phone = models.CharField(max_length=50, blank=True, null=True)
-    message_text = models.TextField(blank=True, null=True)
-
-    # Many to many relationships
-    related_name = "message"
-    service = models.ManyToManyField("Service", related_name=related_name, blank=True, db_table="{}_m2m_message_service".format(apps.app_name))
+    message_text = models.TextField()
 
     # Admin fields
     admin_notes = models.TextField(blank=True, null=True)
