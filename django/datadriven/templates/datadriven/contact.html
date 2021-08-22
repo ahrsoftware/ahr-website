@@ -3,35 +3,31 @@
 
 {% block main %}
 
-    <div class="container">
+<section class="container">
+    <h2>Contact</h2>
+    <p>
+        Contacting us is simple. You can email us directly at <a href="mailto:mikeallaway@gmail.com">mikeallaway@gmail.com</a>, phone us on <a href="tel:07415411688">07415411688</a>, or complete the form below and we'll be in touch.
+    </p>
+    <form id="contact-form" enctype="multipart/form-data" name="form" method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button id="contact-submit" type="submit">Submit</button>
+        <div class="form-submit-notes">
+            Notes
+        </div>
+    </form>
+</section>
 
-        <h2>Contact</h2>
-        <p>
-            Contacting us is simple. You can email us directly at <a href="mailto:mikeallaway@gmail.com">mikeallaway@gmail.com</a>, phone us on <a href="tel:07415411688">07415411688</a>, or complete the form below and we'll be in touch.
-        </p>
+<script>
+    $(document).ready(function() {
 
-        <form id="contact-form" enctype="multipart/form-data" name="form" method="POST" action="{% url 'contact' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-
-            <button id="contact-submit" type="submit">Submit</button>
-            <div class="form-submit-notes">
-                Notes
-            </div>
-        </form>
-
-    </div>
-
-    <script>
-        $(document).ready(function() {
-
-            // Highlight labels of actively focused form elements
-            $("input, select, textarea").each(function(){
-                $(this).on('focus', function(){ $(this).prev().addClass('label-active'); });
-                $(this).on('focusout', function(){ $(this).prev().removeClass('label-active'); });
-            });
-
+        // Highlight labels of actively focused form elements
+        $("input, select, textarea").each(function(){
+            $(this).on('focus', function(){ $(this).prev().addClass('label-active'); });
+            $(this).on('focusout', function(){ $(this).prev().removeClass('label-active'); });
         });
-    </script>
+
+    });
+</script>
 
 {% endblock %}

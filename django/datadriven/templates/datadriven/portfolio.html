@@ -3,23 +3,28 @@
 
 {% block main %}
 
-    <div class="container">
-        <h2>Portfolio</h2>
+<section class="container">
+    <h2>Portfolio</h2>
+    <ul id="portfolio-list">    
+        {% for project in project_list %}
+            <li>
+                <div>
+                    <a href="{{ project.link }}" target="_blank"><label>{{ project.name }}</label></a>
+                    <p>
+                        {{ project.description }}
+                    </p>
+                </div>
+                <a href="{{ project.link }}" target="_blank"><img src="{{ project.image.url }}" alt="Image of {{ project.name }}"></a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
 
-        <ul id="portfolio-list">    
-            {% for project in project_list %}
-                <li>
-                    <div>
-                        <a href="{{ project.link }}" target="_blank"><label>{{ project.name }}</label></a>
-                        <p>
-                            {{ project.description }}
-                        </p>
-                    </div>
-                    <a href="{{ project.link }}" target="_blank"><img src="{{ project.image.url }}" alt="Image of {{ project.name }}"></a>
-                </li>
-            {% endfor %}
-        </ul>
-        
-    </div>
-    
+<section class="container">
+    <h2>Get in Touch</h2>
+    <p>
+        If you like our work and want to find out how we can deliver a similar piece of software for your research project then <a href="{% url 'contact' %}">contact us</a> for a free, no-obligation advice session.
+    </p>
+</section>
+
 {% endblock %}

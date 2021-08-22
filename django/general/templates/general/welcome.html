@@ -3,64 +3,67 @@
 
 {% block main %}
 
-    <div id="welcome-banner">
-        <div id="welcome-banner-tagline">
-            <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software Logo">
-            AHR Software develops bespoke software<br>
-            for arts and humanities research projects<br>
-            in the higher education sector<br>
-            <br>
-            We build websites, data visualisations,<br>
-            mobile apps, databases and more,<br>
-            to help make your research more<br>
-            engaging, accurate, and impactful
-        </div>
-        <div id="welcome-banner-proceed">
-            <i class="fas fa-angle-down"></i>
-        </div>
+<section id="welcome-banner">
+    <div id="welcome-banner-tagline">
+        <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software Logo">
+        AHR Software develops bespoke software<br>
+        for arts and humanities research projects<br>
+        in the higher education sector<br>
+        <br>
+        We build websites, data visualisations,<br>
+        mobile apps, databases and more,<br>
+        to help make your research more<br>
+        engaging, accurate, and impactful
     </div>
-
-    <div id="welcome-content" class="container">
-        <h2>Welcome</h2>
-        <img id="welcome-mike-circle" src="{% static '/images/welcome/mike-allaway.jpg' %}" alt="Photograph of Mike Allaway">
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Why do we use it?
-        </p>
-        <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
-
-        <h2>What Makes Us Unique?</h2>
-        <p>
-            ...
-        </p>
-
-        <h2>Explore</h2>
-        <ul id="welcome-explore">
-            <a href="{% url 'services' %}"><li>Services</li></a>
-            <a href="{% url 'portfolio' %}"><li>Portfolio</li></a>
-            <a href="{% url 'contact' %}"><li>Contact</li></a>
-        </ul>
-        
+    <div id="welcome-banner-proceed">
+        <i class="fas fa-angle-down"></i>
     </div>
+</section>
 
-    <script>
-        $(document).ready(function() {
-            // Scroll down to main welcome section when clicking on the proceed button in the welcome banner
-            $('#welcome-banner-proceed').on('click', function(){
-                $('html,body').animate({ scrollTop: $('#welcome-content').offset().top - 40 }, 800); 
-            });
-            // Set the background of the navbar based on scroll position
-            $(document).on('scroll', function (){
-                let navHasSolidBg = $('nav').hasClass('solidbg');
-                let currentPosition = $(window).scrollTop();
-                let pastBanner = $('#welcome-banner').offset().top + $('#welcome-banner').height();
-                // If past banner, add solid background. If not, remove it.
-                if (currentPosition >= pastBanner && !navHasSolidBg) $('nav').addClass('solidbg');
-                else if (currentPosition < pastBanner && navHasSolidBg) $('nav').removeClass('solidbg'); 
-            });
+<section id="welcome-content" class="container">
+    <h2>Welcome</h2>
+    <img id="welcome-mike-circle" src="{% static '/images/welcome/mike-allaway.jpg' %}" alt="Photograph of Mike Allaway">
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Why do we use it?
+    </p>
+    <p>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+</section>
+
+<section class="container">
+    <h2>What Makes Us Unique?</h2>
+    <p>
+        ...
+    </p>
+</section>
+
+<section class="container">
+    <h2>Explore</h2>
+    <ul id="welcome-explore">
+        <a href="{% url 'services' %}"><li>Services</li></a>
+        <a href="{% url 'portfolio' %}"><li>Portfolio</li></a>
+        <a href="{% url 'contact' %}"><li>Contact</li></a>
+    </ul>
+</section>
+
+<script>
+    $(document).ready(function() {
+        // Scroll down to main welcome section when clicking on the proceed button in the welcome banner
+        $('#welcome-banner-proceed').on('click', function(){
+            $('html,body').animate({ scrollTop: $('#welcome-content').offset().top - 40 }, 800); 
         });
-    </script>
+        // Set the background of the navbar based on scroll position
+        $(document).on('scroll', function (){
+            let navHasSolidBg = $('nav').hasClass('solidbg');
+            let currentPosition = $(window).scrollTop();
+            let pastBanner = $('#welcome-banner').offset().top + $('#welcome-banner').height();
+            // If past banner, add solid background. If not, remove it.
+            if (currentPosition >= pastBanner && !navHasSolidBg) $('nav').addClass('solidbg');
+            else if (currentPosition < pastBanner && navHasSolidBg) $('nav').removeClass('solidbg'); 
+        });
+    });
+</script>
 
 {% endblock %}

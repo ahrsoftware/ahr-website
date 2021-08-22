@@ -324,7 +324,7 @@ button[type='submit']:hover {
     border: 3px solid white;
     border-radius: 100%;
     display: inline-block;
-    width: 2em;
+    width: 2.2em;
     font-weight: bold;
     padding: 0.51em;
     font-size: 2em;
@@ -341,7 +341,7 @@ button[type='submit']:hover {
 }
 
 
-/* ---------- Footer ---------- */
+/* ---------- Portfolio ---------- */
 
 #portfolio-list {
     list-style: none;
@@ -371,6 +371,7 @@ button[type='submit']:hover {
     width: calc(100% - 21em);
     display: inline-block;
     border: 1px solid #505050;
+    border-radius: 0.5em;
 }
 
 

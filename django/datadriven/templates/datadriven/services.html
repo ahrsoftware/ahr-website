@@ -3,50 +3,58 @@
 
 {% block main %}
 
-    <div class="container">
-        <h2>Services</h2>
+<section class="container">
+    <h2>Services</h2>
+    <ul id="services-list">
+        {% for service in service_list %}
+            <li>
+                <label>{{ service.name }}</label>
+                <span><i class="{{ service.fontawesome_icon }}"></i></span>
+                <p>{{ service.description }}</p>
+            </li>
+        {% empty %}
+            <p>Please contact us for more information about our services.</p>
+        {% endfor %}
+    </ul>
+</section>
 
-        <ul id="services-list">
-            {% for service in service_list %}
-                <li>
-                    <label>{{ service.name }}</label>
-                    <span><i class="{{ service.fontawesome_icon }}"></i></span>
-                    <p>{{ service.description }}</p>
-                </li>
-            {% empty %}
-                <p>Please contact us for more information about our services.</p>
-            {% endfor %}
-        </ul>
+<section class="container">
+    <h2>The Process</h2>
+    <p>
+        We understand how dynamic and unpredictable research projects can be. We anticipate and accommodate this unpredictability with a process that's transparent, flexible, and straightforward.
+    </p>
+    <p>
+        Although each project is unique, a typical software development project lifecycle follows these 5 steps:
+    </p>
+    <ol id="services-process-list">
+        <li>
+            <label>1</label>
+            <span>Initial free advice session and help with grant application</span>
+        </li>
+        <li>
+            <label>2</label>
+            <span>Establish and agree on requirements</span>
+        </li>
+        <li>
+            <label>3</label>
+            <span>Iterative design and development, with regular reviews to accommodate unforeseen changes</span>
+        </li>
+        <li>
+            <label>4</label>
+            <span>Finish: final quality checks, tests, make live/public</span>
+        </li>
+        <li>
+            <label>5</label>
+            <span>Ongoing maintenance, communications, and repeating of process</span>
+        </li>
+    </ol>
+</section>
 
-        <h2>The Process</h2>
-        <p>
-            We understand how dynamic and unpredictable research projects can be. We anticipate and accommodate this unpredictability with a process that's transparent, flexible, and straightforward.
-        </p>
-        <p>
-            Although each project is unique, a typical project lifecycle follows these 5 steps:
-        </p>
-        <ol id="services-process-list">
-            <li>
-                <label>1</label>
-                <span>Initial free advice session and help with grant application</span>
-            </li>
-            <li>
-                <label>2</label>
-                <span>Establish and agree on requirements</span>
-            </li>
-            <li>
-                <label>3</label>
-                <span>Iterative design and development, with regular reviews to accommodate unforeseen changes</span>
-            </li>
-            <li>
-                <label>4</label>
-                <span>Finish: final quality checks, tests, make live/public</span>
-            </li>
-            <li>
-                <label>5</label>
-                <span>Ongoing maintenance and open communication</span>
-            </li>
-        </ol>
-    </div>
+<section class="container">
+    <h2>Get in Touch</h2>
+    <p>
+        If you'd like to chat more about any of the services we offer, like a website for your research project or arrange a free, no-obligation advice session, then <a href="{% url 'contact' %}">contact us</a>.
+    </p>
+</section>
     
 {% endblock %}
