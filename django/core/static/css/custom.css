@@ -6,7 +6,7 @@ body {
     color: white;
     margin: 0;
     font-weight: 300;
-    background: #167CBB;
+    background: #B53471;
     max-width: 100vw;
     overflow-x: hidden;
     
@@ -53,7 +53,7 @@ nav {
     color: white;
     max-width: 100vw;
     overflow: hidden;
-    background: #167CBB;
+    background: #B53471;
 }
 
 .navbar-brand {
@@ -119,29 +119,31 @@ main p a {
     max-width: 100%;
     margin: 1em auto 0 auto;
     font-size: 1.7em;
-    color: black;
-    background: #DDD;
+    color: #B53471;
+    background: #FFF;
+    opacity: 0.8;
     border-radius: 0.3em;
 }
 
 .nextup a:hover {
-    color: black;
     text-decoration: none;
-    background: #FFF;
+    opacity: 1;
 }
 
 
 /* ---------- Forms ---------- */
 
-label {
+form label {
     display: block;
     margin-bottom: 0;
-    margin-top: 2em;
+    margin-top: 1.3em;
     font-size: 0.95em;
+    opacity: 0.7;
 }
 
 label.label-active {
-    color: #167CBB;
+    opacity: 1;
+    font-weight: bold;
 }
 
 .helptext {
@@ -159,7 +161,7 @@ select,
 button[type='submit'] {
     width: 100%;
     display: block;
-    padding: 0.3em;
+    padding: 0.5em;
 }
 
 #contact-form input,
@@ -195,28 +197,26 @@ form ul li label {
 }
 
 form ul li label:hover {
-    color: #f39c12;
+    color: white;
 }
 
 button[type='submit'],
 button[type='submit']:visited {
-    background: #f39c12;
+    background: white;
+    color: #B53471;
+    opacity: 0.8;
     border: none;
-    color: black;
+    font-size: 1.2em;
     font-weight: bold;
     padding: 1em;
     border-radius: 0.5em;
-    margin: 3em 0 1em 0;
+    margin: 2em 0 1em 0;
 }
 
 button[type='submit']:hover {
-    background: #b3740f;
-    color: black;
-}
-
-.form-submit-notes {
-    font-size: 0.9em;
-    color: #AAA;
+    background: white;
+    color: #B53471;
+    opacity: 1;
 }
 
 
@@ -225,19 +225,6 @@ button[type='submit']:hover {
 #welcome-banner {
     width: 100%;
     padding-top: 10vh;
-    /* background-image: url('../images/welcome/banner-bg.jpg'); */
-    /* Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-   */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* background: #DE304D; */
-    /* background-color: #ff9966; */
-
-    
-    
-
 }
 
 #welcome-banner-illustration {
@@ -247,8 +234,6 @@ button[type='submit']:hover {
     right: 1em;
     top: 0;
     padding: 20vh 5em 0 2em;
-    /* background: #DE304D; */
-    /* background-color: #ff9966; */
 }
 
 #welcome-banner-illustration img {
@@ -287,7 +272,7 @@ button[type='submit']:hover {
 
 #welcome-banner-proceed:hover {
     background-color: white;
-    color: black;
+    color: #B53471;
 }
 
 
@@ -447,7 +432,7 @@ footer {
     padding: 4em 0 3em 0;
     text-align: center;
     background: white;
-    color: #167CBB;
+    color: #B53471;
 }
 
 #footer-content {
@@ -455,11 +440,11 @@ footer {
 }
 
 footer a {
-    color: #167CBB;
+    color: #B53471;
 }
 
 footer a:hover {
-    color: white;
+    color: #B53471;
 }
 
 

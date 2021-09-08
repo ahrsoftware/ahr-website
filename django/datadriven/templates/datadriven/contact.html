@@ -14,10 +14,7 @@
     <form id="contact-form" enctype="multipart/form-data" name="form" method="POST" action="{% url 'contact' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <button id="contact-submit" type="submit">Submit</button>
-        <div class="form-submit-notes">
-            Your name and email will only be used to respond to your message and then will be securely deleted. We hate spam as much as you and would never share your data.
-        </div>
+        <button id="contact-submit" type="submit"><i class="fas fa-paper-plane"></i> Send</button>
     </form>
 </section>
 
