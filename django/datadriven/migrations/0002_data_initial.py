@@ -10,64 +10,69 @@ def insert_projects(apps, schema_editor):
     projects = [
         {
             'name': 'LINGUINDIC',
-            'description': "x \
-                            x \
-                            x.",
             'image': 'portfolio/linguindic.jpg',
             'link': 'https://linguindic.com/',
             'order': 1
         },
         {
             'name': 'Everyday Lookism',
-            'description': "x \
-                            x \
-                            x.",
             'image': 'portfolio/everydaylookism.jpg',
             'link': 'https://everydaylookism.bham.ac.uk/',
             'order': 2
         },
         {
             'name': 'Linguistic Atlas of Judeo-Spanishes',
-            'description': "x \
-                            x \
-                            x.",
             'image': 'portfolio/judeospanish.jpg',
             'link': 'https://judeospanish.bham.ac.uk/',
             'order': 3
         },
         {
             'name': 'Testimony in Practice',
-            'description': "x \
-                            x \
-                            x.",
             'image': 'portfolio/testimonyinpractice.jpg',
             'link': 'https://testimonyinpractice.bham.ac.uk/',
             'order': 4
         },
         {
             'name': 'Visualise Baudelaire Song',
-            'description': "x \
-                            x \
-                            x.",
             'image': 'portfolio/visualisebaudelairesong.jpg',
             'link': 'https://visualisebaudelairesong.bham.ac.uk/',
             'order': 5
         },
         {
             'name': 'Out of Our Minds',
-            'description': "x \
-                            x \
-                            x.",
             'image': 'portfolio/outofourminds.jpg',
             'link': 'https://outofourminds.bham.ac.uk/',
             'order': 6
-        }
+        },
+        {
+            'name': 'Everything to Everybody',
+            'image': 'portfolio/everythingtoeverybody.jpg',
+            'link': 'https://everythingtoeverybody.bham.ac.uk/',
+            'order': 7
+        },
+        {
+            'name': 'CLiC Calendar',
+            'image': 'portfolio/cliccalendar.jpg',
+            'link': 'https://cliccalendar.bham.ac.uk/',
+            'order': 8
+        },
+        {
+            'name': 'Centre of Digital Cultures',
+            'image': 'portfolio/digitalcultures.jpg',
+            'link': 'https://digitalcultures.bham.ac.uk/',
+            'order': 9
+        },
+        {
+            'name': 'Post-Socialist Britain',
+            'image': 'portfolio/postsocialistbritain.jpg',
+            'link': 'https://postsocialistbritain.bham.ac.uk/',
+            'order': 10
+        },
     ]
 
     # Loop through above data structure, adding each item as a model
     for p in projects:
         models.Project(name=p['name'],
-                       description=p['description'],
                        image=p['image'],
                        link=p['link'],
                        order=p['order']).save()

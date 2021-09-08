@@ -5,19 +5,14 @@
 
 <section class="container">
     <h2>Portfolio</h2>
-    <ul id="portfolio-list">    
+    <p>
+        Lorem upsum dgkdf dkngfk ddkflksml oioei onibiwbfbfvd.
+    </p>
+    <div id="portfolio-projects">    
         {% for project in project_list %}
-            <li>
-                <div>
-                    <a href="{{ project.link }}" target="_blank"><label>{{ project.name }}</label></a>
-                    <p>
-                        {{ project.description }}
-                    </p>
-                </div>
-                <a href="{{ project.link }}" target="_blank"><img src="{{ project.image.url }}" alt="Image of {{ project.name }}"></a>
-            </li>
+            <a href="{{ project.link }}" target="_blank"><img src="{{ project.image.url }}" alt="Image of {{ project.name }}"></a>
         {% endfor %}
-    </ul>
+    </div>
 </section>
 
 <section class="container">
