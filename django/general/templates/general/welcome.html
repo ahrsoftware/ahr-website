@@ -4,6 +4,7 @@
 {% block main %}
 
 <section id="welcome-banner">
+    
     <div id="welcome-banner-tagline">
         <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software Logo">
         AHR Software develops bespoke software<br>
@@ -15,6 +16,9 @@
         to help make your research more<br>
         engaging, accurate, and impactful
     </div>
+    <div id="welcome-banner-illustration">
+        <img src="{% static '/images/welcome/illustration-womanscreen.svg' %}" alt="AHR Software icon">
+    </div>
     <div id="welcome-banner-proceed">
         <i class="fas fa-angle-down"></i>
     </div>
@@ -22,7 +26,6 @@
 
 <section id="welcome-content" class="container">
     <h2>Welcome</h2>
-    <img id="welcome-mike-circle" src="{% static '/images/welcome/mike-allaway.jpg' %}" alt="Photograph of Mike Allaway">
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         Why do we use it?
@@ -51,15 +54,6 @@
         // Scroll down to main welcome section when clicking on the proceed button in the welcome banner
         $('#welcome-banner-proceed').on('click', function(){
             $('html,body').animate({ scrollTop: $('#welcome-content').offset().top - 40 }, 800); 
-        });
-        // Set the background of the navbar based on scroll position
-        $(document).on('scroll', function (){
-            let navHasSolidBg = $('nav').hasClass('solidbg');
-            let currentPosition = $(window).scrollTop();
-            let pastBanner = $('#welcome-banner').offset().top + $('#welcome-banner').height();
-            // If past banner, add solid background. If not, remove it.
-            if (currentPosition >= pastBanner && !navHasSolidBg) $('nav').addClass('solidbg');
-            else if (currentPosition < pastBanner && navHasSolidBg) $('nav').removeClass('solidbg'); 
         });
     });
 </script>
