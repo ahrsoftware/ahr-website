@@ -45,6 +45,11 @@ h3 {
     font-size: 1.8em;
 }
 
+p.primary {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
 
 /* ---------- Navigation ---------- */
 
@@ -237,7 +242,7 @@ button[type='submit']:hover {
     padding: 20vh 5em 0 2em;
 }
 
-#welcome-banner-illustration img {
+#welcome-banner-illustration embed {
     width: 100%;
 }
 
@@ -274,6 +279,36 @@ button[type='submit']:hover {
 #welcome-banner-proceed:hover {
     background-color: white;
     color: #B53471;
+}
+
+#welcome-unique-list {
+    text-align: center;
+    padding-left: 0;
+    font-size: 1em;
+    cursor: default;
+}
+
+#welcome-unique-list li {
+    display: inline-block;
+    width: 16.5em;
+    margin: 0em 0.2em 1em 0.2em;
+    padding: 1em;
+    list-style: none;
+    vertical-align: top;
+    border-radius: 0.7em;
+}
+
+#welcome-unique-list li span i {
+    font-size: 4.7em;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#welcome-unique-list li p {
+    font-size: 0.95em;
+    line-height: 1.4em;
+    text-align: left;
 }
 
 
@@ -319,14 +354,14 @@ button[type='submit']:hover {
 
 #services-process-list {
     max-width: 90%;
-    width: 40em;
+    width: 50em;
     margin: 5em auto 1em auto;
     padding-left: 0;
     list-style: none;
     cursor: default;
 }
 
-#services-process-list li label {
+#services-process-list li span {
     border: 3px solid white;
     border-radius: 100%;
     display: inline-block;
@@ -340,11 +375,11 @@ button[type='submit']:hover {
     text-align: center;
 }
 
-#services-process-list li label i {
+#services-process-list li span i {
     margin-top: -1em;
 }
 
-#services-process-list li span {
+#services-process-list li p {
     width: calc(100% - 7em);
     font-size: 1.4em;
     display: inline-block;
@@ -355,6 +390,10 @@ button[type='submit']:hover {
 
 
 /* ---------- Portfolio ---------- */
+
+#portfolio-projects {
+    margin-top: 3em;
+}
 
 #portfolio-projects img {
     vertical-align: top;

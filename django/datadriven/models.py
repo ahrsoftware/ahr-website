@@ -29,6 +29,34 @@ class Message(models.Model):
         ordering = ['-meta_created_datetime', '-id']
 
 
+class ProcessStage(models.Model):
+    """
+    A stage in our development process
+    """
+
+    description = models.TextField(blank=True, null=True)
+    fontawesome_icon = models.CharField(max_length=100, blank=True, null=True)
+    order = models.IntegerField(default=100)
+
+    # Admin fields
+    admin_published = models.BooleanField(default=True)
+    admin_notes = models.TextField(blank=True, null=True)
+
+    # Metadata fields
+    meta_created_datetime = models.DateTimeField(auto_now_add=True, verbose_name="Created")
+    meta_lastupdated_datetime = models.DateTimeField(auto_now=True, verbose_name='Last Updated')
+
+    def __str__(self):
+        return self.description[0:100]
+
+    @property
+    def description_short(self):
+        return self.description[0:50]
+
+    class Meta:
+        ordering = ['order', '-id']
+
+
 class Project(models.Model):
     """
     A project to be featured in the portfolio

@@ -4,7 +4,6 @@
 {% block main %}
 
 <section id="welcome-banner">
-    
     <div id="welcome-banner-tagline">
         <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software Logo">
         AHR Software develops bespoke software<br>
@@ -17,7 +16,7 @@
         engaging, accurate, and impactful
     </div>
     <div id="welcome-banner-illustration">
-        <img src="{% static '/images/welcome/illustration-womanscreen.svg' %}" alt="AHR Software icon">
+        <embed src="{% static '/images/welcome/illustration-womanscreen.svg' %}" alt="AHR Software icon">
     </div>
     <div id="welcome-banner-proceed">
         <i class="fas fa-angle-down"></i>
@@ -26,16 +25,41 @@
 
 <section id="welcome-content" class="container">
     <h2>Welcome</h2>
+    <p class="primary">
+        Welcome to AHR Software. We're a specialist software development team that caters exclusively to arts and humanities academic research projects in the higher education sector.
+    </p>
     <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        We've built AHR Software based on our extensive experience in the HE sector, building high-quality software for some of the best universities in the UK. We know from speaking directly to researchers how hard it can be to find that perfect software developer to collaborate with, who fully appreciates the dynamics and challenges of academic research. This is where we come in.
+    </p>
+    <p>
+        We understand the academic research project lifecycle, from grant applications through to REF, and we're here to support you throughout the journey. We ensure that your software complies with legal requirements (e.g. ethics and web accessibility), common data standards in HE (e.g. <a href="https://tei-c.org/">TEI</a>), and academic research goals (e.g. open access and impact case studies).
+    </p>
+    <p>
+        Through this website you can view our range of <a href="{% url 'services' %}"> services</a>; view our broad <a href="{% url 'portfolio' %}">portfolio of work</a>; and <a href="{% url 'contact' %}">contact us</a> for a free, no-obligation chat about how we can use software to help take your research project to the next level.
     </p>
 </section>
 
 <section class="container">
     <h2>What Makes Us Unique?</h2>
-    <p>
-        ...
-    </p>
+
+    <ul id="welcome-unique-list">
+        <li>
+            <span><i class="fas fa-university"></i></span>
+            <p>We know arts and humanities academic research better than most. We bring years of specialist knowledge and experience that you won't find in most software development companies to ensure a smoother overall experience with a more suitable, specialised final product.</p>
+        </li>
+        <li>
+            <span><i class="fas fa-comment-alt-smile"></i></span>
+            <p>We understand that you may not be tech-savvy and that's ok! We take care of the technical side of things so that you don't have to. We don't bombard you with confusing jargon and we always explain technical aspects of the project in plain English.</p>
+        </li>
+        <li>
+            <span><i class="fas fa-tools"></i></span>
+            <p>Our services are tailored specifically to arts and humanities research projects. This includes free advice when writing technical aspects of your grant applications (e.g. Data Management Plans); development of tools to efficiently collect, store, and share your academic research data; and free professional branding for your research project.</p>
+        </li>
+        <li>
+            <span><i class="fas fa-user-graduate"></i></span>
+            <p>We know that you're the expert in your academic field. This is why we have a highly transparent and collaborative development process that lets you bring your academic expertise directly into the design and development of your software. You can make sure that your vision is realised and know that you're happy every step of the way.</p>
+        </li>
+    </ul>
 </section>
 
 <section class="container">

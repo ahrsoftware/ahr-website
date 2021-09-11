@@ -33,3 +33,10 @@ class ServicesView(ListView):
     """
     template_name = 'datadriven/services.html'
     queryset = models.Service.objects.filter(admin_published=True)
+
+    def get_context_data(self, **kwargs):
+        context = super(ServicesView, self).get_context_data(**kwargs)
+        context.update({
+            'process_stage_list': models.ProcessStage.objects.filter(admin_published=True)
+        })
+        return context

@@ -27,26 +27,14 @@
         Although each project is unique, a typical software development project lifecycle follows these 5 steps:
     </p>
     <ol id="services-process-list">
-        <li>
-            <label><i class="fas fa-comments"></i></label>
-            <span>1. Initial free advice session and help with grant application</span>
-        </li>
-        <li>
-            <label><i class="far fa-clipboard-list-check"></i></label>
-            <span>2. Establish and agree on requirements</span>
-        </li>
-        <li>
-            <label><i class="fas fa-laptop-code"></i></label>
-            <span>3. Iterative design and development, with regular reviews to accommodate unforeseen changes</span>
-        </li>
-        <li>
-            <label><i class="fas fa-smile-beam"></i></label>
-            <span>4. Finish: final quality checks, tests, make live/public</span>
-        </li>
-        <li>
-            <label><i class="fas fa-sync-alt"></i></label>
-            <span>5. Ongoing maintenance, communications, and repeating of process</span>
-        </li>
+        {% for stage in process_stage_list %}
+            <li>
+                <span><i class="{{ stage.fontawesome_icon }}"></i></span>
+                <p>{{ stage.order }}. {{ stage.description }}</p>
+            </li>
+        {% empty %}
+            <p>Please contact us for more information about our services.</p>
+        {% endfor %}
     </ol>
 </section>
 

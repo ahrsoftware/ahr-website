@@ -35,6 +35,19 @@ class MessageAdminView(admin.ModelAdmin):
     readonly_fields = ('meta_created_datetime', 'meta_lastupdated_datetime')
 
 
+class ProcessStageAdminView(admin.ModelAdmin):
+    """
+    Admin for the ProcessStage model
+    """
+    list_display = ('id', 'order', 'description_short', 'fontawesome_icon', 'admin_published', 'meta_created_datetime')
+    list_display_links = ('id', 'order', 'description_short')
+    list_filter = ('admin_published',)
+    search_fields = ('description', 'fontawesome_icon', 'admin_notes')
+    ordering = ('order', 'id')
+    actions = (publish, unpublish)
+    readonly_fields = ('meta_created_datetime', 'meta_lastupdated_datetime')
+
+
 class ProjectAdminView(admin.ModelAdmin):
     """
     Admin for the Project model
@@ -62,5 +75,6 @@ class ServiceAdminView(admin.ModelAdmin):
 
 
 admin.site.register(models.Message, MessageAdminView)
+admin.site.register(models.ProcessStage, ProcessStageAdminView)
 admin.site.register(models.Project, ProjectAdminView)
 admin.site.register(models.Service, ServiceAdminView)

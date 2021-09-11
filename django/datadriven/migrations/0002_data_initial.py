@@ -15,15 +15,15 @@ def insert_projects(apps, schema_editor):
             'order': 1
         },
         {
-            'name': 'Everyday Lookism',
-            'image': 'portfolio/everydaylookism.jpg',
-            'link': 'https://everydaylookism.bham.ac.uk/',
-            'order': 2
-        },
-        {
             'name': 'Linguistic Atlas of Judeo-Spanishes',
             'image': 'portfolio/judeospanish.jpg',
             'link': 'https://judeospanish.bham.ac.uk/',
+            'order': 2
+        },
+        {
+            'name': 'Everyday Lookism',
+            'image': 'portfolio/everydaylookism.jpg',
+            'link': 'https://everydaylookism.bham.ac.uk/',
             'order': 3
         },
         {
@@ -57,17 +57,17 @@ def insert_projects(apps, schema_editor):
             'order': 8
         },
         {
-            'name': 'Centre of Digital Cultures',
-            'image': 'portfolio/digitalcultures.jpg',
-            'link': 'https://digitalcultures.bham.ac.uk/',
-            'order': 9
-        },
-        {
             'name': 'Post-Socialist Britain',
             'image': 'portfolio/postsocialistbritain.jpg',
             'link': 'https://postsocialistbritain.bham.ac.uk/',
-            'order': 10
+            'order': 9
         },
+        {
+            'name': 'Centre of Digital Cultures',
+            'image': 'portfolio/digitalcultures.jpg',
+            'link': 'https://digitalcultures.bham.ac.uk/',
+            'order': 10
+        }
     ]
 
     # Loop through above data structure, adding each item as a model
@@ -76,6 +76,46 @@ def insert_projects(apps, schema_editor):
                        image=p['image'],
                        link=p['link'],
                        order=p['order']).save()
+
+
+def insert_process_stages(apps, schema_editor):
+    """
+    Inserts Service objects
+    """
+
+    process_stages = [
+        {
+            'fontawesome_icon': 'fas fa-comments',
+            'description': "Initial free advice session to chat about your research and help with your grant application.",
+            'order': 1
+        },
+        {
+            'fontawesome_icon': 'far fa-clipboard-list-check',
+            'description': "We work together to establish a comprehensive but flexible list of your requirements.",
+            'order': 2
+        },
+        {
+            'fontawesome_icon': 'fas fa-laptop-code',
+            'description': "We design and develop your software, working openly, iteratively, and collaboratively.",
+            'order': 3
+        },
+        {
+            'fontawesome_icon': 'fas fa-smile-beam',
+            'description': "Once you're completely happy with the finished product we make it publicly available.",
+            'order': 4
+        },
+        {
+            'fontawesome_icon': 'fas fa-sync-alt',
+            'description': "We maintain and support your software for as long as you need us to.",
+            'order': 5
+        },
+    ]
+
+    # Loop through above data structure, adding each item as a model
+    for ps in process_stages:
+        models.ProcessStage(fontawesome_icon=ps['fontawesome_icon'],
+                            description=ps['description'],
+                            order=ps['order']).save()
 
 
 def insert_services(apps, schema_editor):
@@ -148,7 +188,7 @@ def insert_services(apps, schema_editor):
         },
         {
             'name': 'Branding',
-            'fontawesome_icon': 'fas fa-palette',
+            'fontawesome_icon': 'fas fa-paint-brush',
             'description': "We can design unique and attractive branding \
                             for your research project and apply this to your \
                             project website to make a consistent and professional \
@@ -165,7 +205,6 @@ def insert_services(apps, schema_editor):
                        order=s['order']).save()
 
 
-
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -173,6 +212,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(insert_process_stages),
         migrations.RunPython(insert_projects),
         migrations.RunPython(insert_services),
     ]
