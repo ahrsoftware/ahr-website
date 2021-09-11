@@ -233,52 +233,14 @@ button[type='submit']:hover {
     padding-top: 10vh;
 }
 
-#welcome-banner-illustration {
-    position: absolute;
-    width: 40%;
-    height: 100vh;
-    right: 1em;
-    top: 0;
-    padding: 20vh 5em 0 2em;
-}
-
-#welcome-banner-illustration embed {
-    width: 100%;
-}
-
 #welcome-banner-tagline {
-    text-align: center;
-    font-size: 1.9em;
-    font-weight: bold;
     line-height: 1.5em;
     color: white;
-    float: left;
 }
 
-#welcome-banner-tagline-logo {
-    width: 18em;
-    display: block;
-    margin-bottom: 2em;
-}
-
-#welcome-banner-proceed {
-    font-size: 3em;
-	position: absolute;
-	bottom: 0.8em;
-    left: calc(50% - 40px);
-    border-radius: 100%;
-    border: 4px solid white;
-    width: 80px;
-    height: 80px;
-	text-align: center;
-	color: white;
-    cursor: pointer;
-    line-height: 80px;
-}
-
-#welcome-banner-proceed:hover {
-    background-color: white;
-    color: #B53471;
+#welcome-banner-tagline p {
+    font-weight: bold;
+    margin-top: 2em;
 }
 
 #welcome-unique-list {
@@ -289,8 +251,6 @@ button[type='submit']:hover {
 }
 
 #welcome-unique-list li {
-    display: inline-block;
-    width: 16.5em;
     margin: 0em 0.2em 1em 0.2em;
     padding: 1em;
     list-style: none;
@@ -306,7 +266,6 @@ button[type='submit']:hover {
 }
 
 #welcome-unique-list li p {
-    font-size: 0.95em;
     line-height: 1.4em;
     text-align: left;
 }
@@ -322,13 +281,8 @@ button[type='submit']:hover {
 }
 
 #services-list li {
-    display: inline-block;
-    width: 16.5em;
-    margin: 0em 0.2em 1em 0.2em;
-    padding: 1em;
     list-style: none;
     vertical-align: top;
-    border-radius: 0.7em;
 }
 
 #services-list li label {
@@ -347,7 +301,6 @@ button[type='submit']:hover {
 }
 
 #services-list li p {
-    font-size: 0.85em;
     line-height: 1.4em;
     text-align: left;
 }
@@ -364,27 +317,17 @@ button[type='submit']:hover {
 #services-process-list li span {
     border: 3px solid white;
     border-radius: 100%;
-    display: inline-block;
-    width: 2.2em;
     font-weight: 600;
     padding: 0.64em 0 0 0.05em;
     height: 2.2em;
-    font-size: 2.3em;
-    margin: 0.4em 0.8em 0.4em 0;
+    width: 2.2em;
     vertical-align: middle;
     text-align: center;
 }
 
-#services-process-list li span i {
-    margin-top: -1em;
-}
-
 #services-process-list li p {
-    width: calc(100% - 7em);
     font-size: 1.4em;
-    display: inline-block;
     vertical-align: middle;
-    padding: 0.5em;
     font-weight: bold;
 }
 
@@ -395,18 +338,10 @@ button[type='submit']:hover {
     margin-top: 3em;
 }
 
-#portfolio-projects img {
-    vertical-align: top;
-    width: calc(49% - 0.4em);
-    margin: 0.4em 0.2em;
-    display: inline-block;
-}
-
 
 /* ---------- Contact ---------- */
 
 #contact-form {
-    width: 70%;
     margin: 5em auto 1em auto;
 }
 

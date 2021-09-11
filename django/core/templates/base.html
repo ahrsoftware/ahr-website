@@ -50,14 +50,15 @@
 
         <!-- Navigation bar -->
         <nav class="navbar fixed-top navbar-expand-lg {% if request.path != "/" %}solidbg{% endif %}">
-            <!-- Logo (don't show on the welcome page) -->
-            {% if request.path != "/" %}
-                <a class="navbar-brand" href="{% url 'welcome' %}"><img src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software logo"></a>
-            {% endif %}
+            <!-- Logo -->
+            <a class="navbar-brand {% if request.path == "/" %}hidden{% endif %}" href="{% url 'welcome' %}"><img src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software logo"></a>
+           
             <!-- Nav toggle button (for small screens) -->
-            <button class="navbar-toggler" type="button" title="navbartoggle" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div id="navbar-toggle-container">
+                <button class="navbar-toggler" type="button" title="navbartoggle" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
             <!-- Nav list -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
