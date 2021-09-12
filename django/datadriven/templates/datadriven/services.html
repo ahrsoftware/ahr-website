@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<section class="container">
+    <h2>Services</h2>
+    <ul id="services-list">
+        {% for service in service_list %}
+            <li>
+                <label>{{ service.name }}</label>
+                <span><i class="{{ service.fontawesome_icon }}"></i></span>
+                <p>{{ service.description }}</p>
+            </li>
+        {% empty %}
+            <p>Please contact us for more information about our services.</p>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="container">
+    <h2>The Process</h2>
+    <p>
+        We understand how dynamic and unpredictable research projects can be. We anticipate and accommodate this with a process that's transparent, flexible, and straightforward.
+    </p>
+    <p>
+        Although each project is unique, a typical software development project lifecycle follows these 5 steps:
+    </p>
+    <ol id="services-process-list">
+        {% for stage in process_stage_list %}
+            <li>
+                <span><i class="{{ stage.fontawesome_icon }}"></i></span>
+                <p>{{ stage.order }}. {{ stage.description }}</p>
+            </li>
+        {% empty %}
+            <p>Please contact us for more information about our services.</p>
+        {% endfor %}
+    </ol>
+</section>
+
+<section class="container">
+    <h2>Next up</h2>
+    <div class="nextup">
+        <a href="{% url 'portfolio' %}" class="nextup">Portfolio</a>
+    </div>
+</section>
+    
+{% endblock %}

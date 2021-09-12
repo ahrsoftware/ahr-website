@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<section class="container">
+    <h2>Portfolio</h2>
+    <p>
+        We've built a strong portfolio of software development projects whilst working at some of the best Universities in the country. Simply click on any image below to explore each project further.
+    </p>
+    <div id="portfolio-projects">    
+        {% for project in project_list %}
+            <a href="{{ project.link }}" target="_blank"><img src="{{ project.image.url }}" alt="Image of {{ project.name }}"></a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container">
+    <h2>Next up</h2>
+    <div class="nextup">
+        <a href="{% url 'contact' %}" class="nextup">Contact</a>
+    </div>
+</section>
+
+{% endblock %}

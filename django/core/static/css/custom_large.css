@@ -1,0 +1,151 @@
+@media (min-width: 992px) {
+    /* ---------- Navigation ---------- */
+
+    nav {
+        height: 5em;
+    }
+
+    .navbar-brand {
+        padding: 0em;
+    }
+
+    .navbar-brand.hidden {
+        display: none;
+    }
+
+    .navbar-brand img {
+        height: 2.25em;
+    }
+
+    .nav-link {
+        margin: 0.5em 0.8em;
+    }
+
+    /* ---------- Main ---------- */
+
+    main {
+        min-height: 100vh;
+    }
+
+    /* ---------- Welcome ---------- */
+
+    #welcome-banner {
+        height: 100vh;
+    }
+
+    #welcome-banner-illustration {
+        position: absolute;
+        width: 40%;
+        height: 100vh;
+        right: 0vw;
+        top: 0;
+        padding: 20vh 5em 0 2em;
+    }
+    
+    #welcome-banner-illustration embed {
+        width: 100%;
+    }
+
+    #welcome-banner-tagline {
+        width: 100%;
+        margin-left: 5vw;
+        margin-top: 3vh;
+        text-align: left;
+        background: none;
+        padding: 0em;
+    }
+
+    #welcome-banner-tagline-logo {
+        width: 18em;
+        font-size: 1.9em;
+        display: block;
+        margin-bottom: 2em;
+    }
+
+
+    #welcome-banner-tagline p {
+        font-size: 1.9em;
+    }
+
+    #welcome-banner-proceed {
+        position: absolute;
+        bottom: 0.8em;
+        left: calc(50% - 40px);
+        font-size: 3em;
+        border-radius: 100%;
+        border: 4px solid white;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        line-height: 80px;
+    }
+    
+    #welcome-banner-proceed:hover {
+        background-color: white;
+        color: #B53471;
+    }
+
+    #welcome-unique-list li {
+        display: inline-block;
+        width: 16.5em;
+    }
+
+    #welcome-unique-list li p {
+        font-size: 0.95em;
+    }
+
+    /* ---------- Services ---------- */
+
+    #services-list li {
+        display: inline-block;
+        width: 16.5em;
+        margin: 0em 0.2em 1em 0.2em;
+        padding: 1em;
+    }
+
+    #services-list li p {
+        font-size: 0.85em;
+    }
+
+    #services-process-list li span {
+        display: inline-block;
+        margin: 0.4em 0.8em 0.4em 0;
+        font-size: 2.3em;
+    }
+
+    #services-process-list li span i {
+        margin-top: -1em;
+    }
+
+    #services-process-list li p {
+        width: calc(100% - 7em);
+        display: inline-block;
+        padding: 0.5em;
+    }
+
+    /* ---------- Portfolio ---------- */
+    
+    #portfolio-projects img {
+        vertical-align: top;
+        width: calc(49% - 0.4em);
+        margin: 0.4em 0.2em;
+        display: inline-block;
+    }
+
+    /* ---------- Contact ---------- */
+
+    #contact-form {
+        width: 70%;
+    }
+    
+    /* ---------- Footer ---------- */
+
+    #footer-content img {
+        height: 5em;
+        margin: 0 4em 2em 4em;
+        display: inline-block;
+    }
+
+}

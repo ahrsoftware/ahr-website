@@ -1,0 +1,15 @@
+{
+    "defaults": {
+        "chromeLaunchConfig": {
+            "args": ["--no-sandbox"]
+        }
+    },
+    "urls": [
+        "http://127.0.0.1:8000/",
+        "http://127.0.0.1:8000/services/",
+        "http://127.0.0.1:8000/portfolio/",
+        "http://127.0.0.1:8000/contact/",
+        "http://127.0.0.1:8000/accessibility/",
+        "http://127.0.0.1:8000/cookies/"
+    ]
+}
