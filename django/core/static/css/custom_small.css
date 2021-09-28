@@ -1,6 +1,10 @@
 @media (max-width: 991px) {
     /* ---------- Navigation ---------- */
 
+    nav {
+        background: #0eb8ad;
+    }
+
     .navbar-brand img {
         height: 1.7em;
     }
@@ -36,18 +40,7 @@
     /* ---------- Welcome ---------- */
 
     #welcome-banner {
-        min-height: calc(100vh - 3.39em);
-    }
-
-    #welcome-banner-illustration {
-        display: block;
-        width: 80%;
-        max-width: 30em;
-        margin: 1em auto;
-    }
-    
-    #welcome-banner-illustration embed {
-        width: 100%;
+        min-height: 100vh;
     }
 
     #welcome-banner-tagline {
@@ -58,10 +51,6 @@
 
     #welcome-banner-tagline p {
         font-size: 1.6em;
-    }
-
-    #welcome-banner-tagline-logo {
-        display: none;
     }
 
     #welcome-banner-proceed {
