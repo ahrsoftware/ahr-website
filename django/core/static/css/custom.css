@@ -61,7 +61,7 @@ nav {
 }
 
 nav.solidbg {
-    background: black;
+    background: #082e41;
 }
 
 .navbar-brand {
@@ -81,18 +81,19 @@ nav.solidbg {
 
 .nav-link.active {
     font-weight: 600;
-    color: white;
+    color: #0eb8ad;
     opacity: 1;
 }
 
 nav a:hover {
     color: white;
+    opacity: 1;
 }
 
 /* ---------- Main ---------- */
 
 main {
-    padding-bottom: 10em;
+    padding-bottom: 7em;
 }
 
 main p,
@@ -400,7 +401,7 @@ button[type='submit']:hover {
 /* ---------- Footer ---------- */
 
 footer {
-    padding: 4em 0 3em 0;
+    padding: 3em 0;
     text-align: center;
 }
 
