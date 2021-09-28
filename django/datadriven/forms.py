@@ -25,3 +25,10 @@ class ContactForm(forms.ModelForm):
         fields = ('customer_name',
                   'customer_email',
                   'message_text')
+
+    def __init__(self, *args, **kwargs):
+        """
+        Set label suffix (e.g. remove : from end of form labels)
+        """
+        kwargs.setdefault('label_suffix', '')
+        super(ContactForm, self).__init__(*args, **kwargs)

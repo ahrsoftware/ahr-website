@@ -4,23 +4,13 @@
 {% block main %}
 
 <section id="welcome-banner">
-
-    <div id="welcome-banner-illustration">
-        <embed src="{% static '/images/welcome/illustration-womanscreen.svg' %}" alt="AHR Software icon">
-    </div>
     
     <div id="welcome-banner-tagline">
-        <img id="welcome-banner-tagline-logo" src="{% static '/images/logos/ahr-software.png' %}" alt="AHR Software Logo">
         <p>
-            AHR Software develops bespoke software<br>
-            for arts and humanities research projects<br>
-            in the higher education sector<br>
+            AHR Software develops bespoke software for arts and humanities research projects in the higher education sector
         </p>
         <p>
-            We build websites, data visualisations,<br>
-            mobile apps, databases and more,<br>
-            to help make your research more<br>
-            engaging, accurate, and impactful
+            We build websites, databases, mobile apps, data visualisations and more, to help make your research more engaging, accurate, and impactful.
         </p>
     </div>
     
@@ -33,10 +23,10 @@
 <section id="welcome-content" class="container">
     <h2>Welcome</h2>
     <p class="primary">
-        Welcome to AHR Software. We're a specialist software development team that caters exclusively to arts and humanities academic research projects in the higher education sector.
+        Welcome to AHR Software. We're a software development team with a special interest in arts and humanities academic research projects in the higher education sector.
     </p>
     <p>
-        We've built AHR Software based on our extensive experience in the HE sector, building high-quality software for some of the best universities in the UK. We know from speaking directly to researchers how hard it can be to find that perfect software developer to collaborate with, who fully appreciates the dynamics and challenges of academic research. This is where we come in.
+        We've built AHR Software based on our extensive experience in the HE sector, building high-quality software for arts and humanities research projects at some of the best universities in the country. We know from speaking directly to researchers how hard it can be to find that perfect software developer to collaborate with, who fully appreciates the dynamics and challenges of academic research. This is where we come in.
     </p>
     <p>
         We understand the academic research project lifecycle, from grant applications through to REF, and we're here to support you throughout the journey. We ensure that your software complies with legal requirements (e.g. ethics and web accessibility), common data standards in HE (e.g. <a href="https://tei-c.org/">TEI</a>), and academic research goals (e.g. open access and impact case studies).
@@ -51,20 +41,24 @@
 
     <ul id="welcome-unique-list">
         <li>
+            <label>Our Knowledge and Experience</label>
             <span><i class="fas fa-university"></i></span>
-            <p>We know arts and humanities academic research much better than most software developers. We bring years of specialist knowledge and experience to ensure a smoother overall experience with a more suitable, specialised final product.</p>
+            <p>We know arts and humanities academic research much better than most software developers. We bring years of specialist knowledge and experience to ensure a smoother development process, which leads to some fantastic software for your research project.</p>
         </li>
         <li>
+            <label>Our Friendly Approach</label>
             <span><i class="fas fa-comment-alt-smile"></i></span>
             <p>We understand that you may not be tech-savvy and that's ok! We take care of the technical side of things so that you don't have to. We don't bombard you with confusing jargon and we always explain technical aspects of the project in plain English.</p>
         </li>
         <li>
+            <label>Our Tailored Services</label>
             <span><i class="fas fa-tools"></i></span>
-            <p>Our services are tailored specifically to arts and humanities research projects. This includes free advice when writing technical aspects of your grant applications (e.g. Data Management Plans); development of tools to efficiently collect, store, and share your academic research data; and free professional branding for your research project.</p>
+            <p>Our services are tailored specifically to arts and humanities research projects. This includes free advice for writing technical aspects of your grant applications, the development of software to work with your academic research data, and free professional branding for your project.</p>
         </li>
         <li>
+            <label>Our Open Process</label>
             <span><i class="fas fa-user-graduate"></i></span>
-            <p>We know that you're the expert in your academic field. This is why we have a highly transparent and collaborative development process that lets you bring your academic expertise directly into the design and development of your software. You can make sure that your vision is realised and know that you're happy every step of the way.</p>
+            <p>You're the expert in your academic field. This is why we have a transparent and collaborative development process that lets you bring your academic expertise directly into the development of your software. You can make sure that your vision is realised and know that you're happy every step of the way.</p>
         </li>
     </ul>
 </section>
@@ -81,6 +75,15 @@
         // Scroll down to main welcome section when clicking on the proceed button in the welcome banner
         $('#welcome-banner-proceed').on('click', function(){
             $('html,body').animate({ scrollTop: $('#welcome-content').offset().top - 40 }, 800); 
+        });
+        // Set the background of the navbar based on scroll position
+        $(document).on('scroll', function (){
+            let navHasSolidBg = $('nav').hasClass('solidbg');
+            let currentPosition = $(window).scrollTop();
+            let pastBanner = $('#welcome-banner').offset().top + $('#welcome-banner').height();
+            // If past banner, add solid background. If not, remove it.
+            if (currentPosition >= pastBanner && !navHasSolidBg) $('nav').addClass('solidbg');
+            else if (currentPosition < pastBanner && navHasSolidBg) $('nav').removeClass('solidbg'); 
         });
     });
 </script>
