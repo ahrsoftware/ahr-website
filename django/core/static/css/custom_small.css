@@ -1,6 +1,10 @@
 @media (max-width: 991px) {
     /* ---------- Navigation ---------- */
 
+    nav {
+        background: #0eb8ad;
+    }
+
     .navbar-brand img {
         height: 1.7em;
     }
