@@ -51,7 +51,6 @@ p.primary {
     font-size: 1.4em;
 }
 
-
 /* ---------- Navigation ---------- */
 
 nav {
@@ -89,7 +88,6 @@ nav.solidbg {
 nav a:hover {
     color: white;
 }
-
 
 /* ---------- Main ---------- */
 
@@ -139,7 +137,6 @@ main p a {
     background: #0eb8ad;
     color: white;
 }
-
 
 /* ---------- Forms ---------- */
 
@@ -229,7 +226,6 @@ button[type='submit']:hover {
     opacity: 1;
 }
 
-
 /* ---------- Welcome ---------- */
 
 #welcome-banner {
@@ -290,7 +286,6 @@ button[type='submit']:hover {
     line-height: 1.4em;
     text-align: left;
 }
-
 
 /* ---------- Services ---------- */
 
@@ -354,7 +349,6 @@ button[type='submit']:hover {
     font-weight: bold;
 }
 
-
 /* ---------- Portfolio ---------- */
 
 #portfolio-projects {
@@ -368,7 +362,6 @@ button[type='submit']:hover {
 #portfolio-projects a img:hover {
     border: 5px solid #0eb8ad;
 }
-
 
 /* ---------- Contact ---------- */
 
@@ -404,7 +397,6 @@ button[type='submit']:hover {
     text-decoration: none;
 }
 
-
 /* ---------- Footer ---------- */
 
 footer {
@@ -415,7 +407,6 @@ footer {
 #footer-content {
     font-size: 1.2em;
 }
-
 
 /* ---------- Error Pages ---------- */
 
