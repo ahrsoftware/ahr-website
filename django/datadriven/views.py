@@ -9,7 +9,7 @@ class ContactView(CreateView):
     """
     template_name = 'datadriven/contact.html'
     form_class = forms.ContactForm
-    success_url = reverse_lazy('contact')
+    success_url = reverse_lazy('contact-success')
 
 
 class ContactSuccessView(TemplateView):
