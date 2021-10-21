@@ -237,7 +237,7 @@ button[type='submit']:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: black;
+    background-color: #082e41;
     background-attachment: fixed;
 }
 
