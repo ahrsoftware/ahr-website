@@ -81,7 +81,10 @@ class Project(models.Model):
 
     @property
     def description_short(self):
-        return self.description[0:75]
+        if self.description:
+            return self.description[0:75]
+        else:
+            return "(no description)"
 
     class Meta:
         ordering = ['order', 'name', '-id']
