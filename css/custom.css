@@ -1,0 +1,388 @@
+
+/* ---------- General ---------- */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    font-weight: 300;
+    background: #082e41;
+    max-width: 100vw;
+    overflow-x: hidden;
+    
+}
+
+a {
+    color: #0eb8ad;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #0eb8ad;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;;
+}
+
+h2 {
+    padding-top: 2.5em;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em 0 1.3em 0;
+}
+
+h3 {
+    padding: 2em 0 0.5em 0;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    font-size: 1.8em;
+}
+
+p.primary {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+    background: rgba(0,0,0,0); /* transparent */
+    color: white;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+nav.solidbg {
+    background: #082e41;
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    font-size: 1.1em;
+}
+
+.nav-item {
+    font-weight: 600;
+    font-size: 1.1em;
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: white;
+    opacity: 1;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    padding-bottom: 7em;
+}
+
+main p,
+main ul,
+main ol {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    letter-spacing: 0.04rem;
+    font-weight: 300;
+}
+
+/* ---------- Forms ---------- */
+
+form label {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 1.3em;
+    font-size: 0.95em;
+    opacity: 0.7;
+}
+
+label.label-active {
+    opacity: 1;
+    font-weight: bold;
+    color: #0eb8ad;
+}
+
+.helptext {
+    font-size: 0.9em;
+    color: #AAA;
+}
+
+.errorlist {
+    color: red;
+}
+
+input,
+textarea,
+select,
+button[type='submit'] {
+    width: 100%;
+    display: block;
+    padding: 0.5em;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    background: #FFF;
+    border: none;
+    border-radius: 0.3em;
+}
+
+#contact-form input[type='file'] {
+    border: 1px solid white;
+    background: none;
+}
+
+input[type='checkbox'] {
+    display: inline;
+    width: auto;
+}
+
+form ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+form ul li {
+    display: inline-block;
+}
+
+form ul li label {
+    margin: 0.3em 2em 0 0;
+    cursor: pointer;
+}
+
+form ul li label:hover {
+    color: white;
+}
+
+button[type='submit'],
+button[type='submit']:visited {
+    background: white;
+    color: #082e41;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 0.5em;
+    margin: 2em 0 1em 0;
+}
+
+button[type='submit']:hover {
+    color: white;
+    background: #0eb8ad;
+    opacity: 1;
+}
+
+/* ---------- Jumbotron ---------- */
+
+#jumbotron {
+    width: 100%;
+    padding-top: 10vh;
+    /* https://pixabay.com/photos/polar-lights-night-sky-stars-5858656/ */
+    background-image: url('../images/jumbotron/jumbotron-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #082e41;
+    background-attachment: fixed;
+}
+
+#jumbotron-tagline {
+    line-height: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+#jumbotron-tagline p {
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+/* ---------- Welcome ---------- */
+
+#welcome-unique-list {
+    text-align: center;
+    padding-left: 0;
+    font-size: 1em;
+    cursor: default;
+}
+
+#welcome-unique-list li {
+    margin: 0em 0.2em 1em 0.2em;
+    padding: 1em;
+    list-style: none;
+    vertical-align: top;
+    border-radius: 0.7em;
+}
+
+#welcome-unique-list li label {
+    font-size: 1.7em;
+    font-weight: bold;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#welcome-unique-list li span i {
+    font-size: 4.7em;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+    color: #0eb8ad;
+}
+
+#welcome-unique-list li p {
+    line-height: 1.4em;
+    text-align: left;
+}
+
+/* ---------- Services ---------- */
+
+#services-list {
+    text-align: center;
+    padding-left: 0;
+    font-size: 1em;
+    cursor: default;
+}
+
+#services-list li {
+    list-style: none;
+    vertical-align: top;
+}
+
+#services-list li label {
+    font-size: 1.7em;
+    font-weight: bold;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#services-list li span i {
+    font-size: 4.7em;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+    color: #0eb8ad;
+}
+
+#services-list li p {
+    line-height: 1.4em;
+    text-align: left;
+}
+
+#process-list {
+    max-width: 90%;
+    width: 50em;
+    margin: 5em auto 1em auto;
+    padding-left: 0;
+    list-style: none;
+    cursor: default;
+}
+
+#process-list li span {
+    border: 3px solid white;
+    border-radius: 100%;
+    font-weight: 600;
+    padding: 0.64em 0 0 0.05em;
+    height: 2.2em;
+    width: 2.2em;
+    vertical-align: middle;
+    text-align: center;
+    color: #0eb8ad;
+}
+
+#process-list li p {
+    font-size: 1.4em;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+/* ---------- Portfolio ---------- */
+
+#portfolio-projects {
+    margin-top: 3em;
+}
+
+#portfolio-projects a img {
+    border: 5px solid #082e41;
+}
+
+#portfolio-projects a img:hover {
+    border: 5px solid #0eb8ad;
+}
+
+/* ---------- Contact ---------- */
+
+#contact-form {
+    margin: 5em auto 1em auto;
+}
+
+#contact-form label,
+#contact-form .helptext {
+    font-size: 1rem;
+}
+
+#contact-success-icon {
+    font-size: 5em;
+    display: block;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#contact-success-finished {
+    background: white;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    text-align: center;
+    color: black;
+    margin: 3em auto;
+    display: block;
+    width: 8em;
+    font-weight: bold;
+}
+
+#contact-success-finished:hover {
+    text-decoration: none;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 3em 0 13em 0;
+    text-align: center;
+}
+
+#copyright {
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+/* ---------- Error Pages ---------- */
+
+.errorpage-path {
+    font-weight: bold;
+}
+
+.errorpage-code {
+    margin-top: 3em;
+    font-size: 0.8em;
+}

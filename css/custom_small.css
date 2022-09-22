@@ -1,0 +1,117 @@
+@media (max-width: 991px) {
+    /* ---------- Navigation ---------- */
+
+    nav {
+        background: #082e41;
+    }
+
+    .navbar-brand img {
+        height: 1.7em;
+    }
+
+    #navbar-toggle-container {
+        width: 5em;
+        float: right;
+        text-align: right;
+    }
+
+    .navbar-toggler {
+        color: white;
+        font-size: 1.7em;
+        position: relative;
+        right: 0.3em;
+    }
+    
+    .nav-item {
+        margin-top: 1em;
+    }
+
+    .nav-item:last-of-type {
+        margin-bottom: 1em;
+    }
+
+    /* ---------- Main ---------- */
+
+    main {
+        /* margin-top: 3.39em; */
+        min-height: calc(100vh - 3.39em);
+    }
+
+    /* ---------- Welcome ---------- */
+
+    #jumbotron {
+        min-height: 100vh;
+    }
+
+    #jumbotron-tagline {
+        width: 90%;
+        margin-left: 5%;
+        padding: 0.5em;
+    }
+
+    #jumbotron-tagline p {
+        font-size: 1.6em;
+    }
+
+    #jumbotron-proceed {
+        display: none;
+    }
+
+    #welcome-unique-list li {
+        display: block;
+    }
+
+    #welcome-unique-list li p {
+        font-size: 1.1em;
+    }
+
+    /* ---------- Services ---------- */
+
+    #services-list li {
+        display: block;
+        font-size: 1.1em;
+        margin: 2em auto;
+        padding: 0.3em;
+    }
+
+    #services-list li p {
+        font-size: 1em;
+    }
+
+    #process-list li span {
+        display: block;
+        margin: 1.2em auto 0.4em auto;
+        font-size: 4em;
+    }
+
+    #process-list li span i {
+        margin-top: -0.1em;
+    }
+
+    #process-list li p {
+        display: block;
+        padding: 0.1em;
+    }
+
+    /* ---------- Portfolio ---------- */
+    
+    #portfolio-projects img {
+        margin: 3em auto;
+        display: block;
+        width: 100%;
+    }
+
+    /* ---------- Contact ---------- */
+
+    #contact-form {
+        width: 90%;
+    }
+    
+    /* ---------- Footer ---------- */
+
+    #footer-content img {
+        height: 6em;
+        margin: 0 auto 2em auto;
+        display: block;
+    }
+}
